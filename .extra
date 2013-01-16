@@ -1,6 +1,3 @@
-# PATH additions
-export PATH="~/bin:$PATH"
-
 # Git credentials
 # Not in the repository, to prevent people from accidentally committing under my name
 GIT_AUTHOR_NAME="Laurent Perrinet"
