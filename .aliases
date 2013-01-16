@@ -47,7 +47,7 @@ alias sudo='sudo '
 alias gurl="curl --compressed"
 
 # Get OS X Software Updates, TexLive and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; sudo tlmgr update --self; sudo tlmgr update --all brew update; brew upgrade; brew cleanup; sudo gem update'
+alias update='echo "MacOSX updates"; sudo softwareupdate -i -a; echo "TeXLive updates"; sudo tlmgr update --self; sudo tlmgr update --all brew update; echo "HomeBrew updates"; brew upgrade; brew cleanup; sudo gem update'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
