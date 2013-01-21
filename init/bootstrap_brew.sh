@@ -39,8 +39,8 @@ brew install ack
 brew install git
 #brew install imagemagick
 #brew install lynx
-brew install node
-brew install rename
+#brew install node
+#brew install rename
 #brew install rhino
 #brew install tree
 #brew install webkit2png
