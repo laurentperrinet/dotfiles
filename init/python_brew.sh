@@ -8,7 +8,7 @@ brew upgrade
 
 # you should have run the bootstrap_brew.sh script before to get core packages
 
-
+# https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python
 brew install python
 
 pip install --upgrade distribute
