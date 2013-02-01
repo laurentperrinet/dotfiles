@@ -1,4 +1,11 @@
 #!/bin/bash
+# 1. install Xcode:
+# From this url : http://itunes.apple.com/us/app/xcode/id497799835?mt=12 install Xcode on the Mac App Store by clicking on “View in Mac App Store”.
+
+# 2. install HomeBrew
+#ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+# to reinstall, do:
+# rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
 
 # Make sure we’re using the latest Homebrew
 brew update
@@ -6,7 +13,9 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade
 
-# you should have run the bootstrap_brew.sh script before to get core packages
+# It is recommend to run the bootstrap_brew.sh script to obtain core packages
+
+# 3. install python and friends
 
 # https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python
 brew install python
@@ -25,8 +34,12 @@ easy_install pyreport
 
 # numpy et al
 brew install gfortran
-brew install libtool libagg
+brew install cmake
+brew install fftw
+brew install umfpack
+brew install libtool
 pip install -U numpy
+pip install -U PIL
 pip install -U scipy
 pip install -U matplotlib
 # pip install git+git://github.com/matplotlib/matplotlib.git
@@ -35,23 +48,16 @@ pip install -U matplotlib
 # pyglet
 pip install -U Opengl
 pip install -U glumpy
-#easy_install pyglet
 
 pip install Mercurial
-#pip install https://pyglet.googlecode.com/hg/
+pip install hg+https://pyglet.googlecode.com/hg/
 #easy_install pyobjc-core
 #easy_install pyobjc
-hg clone https://pyglet.googlecode.com/hg/ pyglet
-cd pyglet
-python setup.py install --user
-cd ..
-rm -fr pyglet
-
-#hg clone https://code.google.com/r/evilphillip-cocoa-ctypes2/
-#cd evilphillip-cocoa-ctypes2
-#python setup.py install
+#hg clone https://pyglet.googlecode.com/hg/ pyglet
+#cd pyglet
+#python setup.py install --user
 #cd ..
-#rm -fr evilphillip-cocoa-ctypes2
+#rm -fr pyglet
 
 # video utilities
 brew install ffmpeg x264
