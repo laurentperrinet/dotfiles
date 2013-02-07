@@ -23,7 +23,7 @@ brew install python
 pip install --upgrade distribute
 # editing environment
 pip install -U pyzmq
-pip install -U ipython
+pip install -U tornado ipython
 brew install pyqt
 pip install -U sphinx
 pip install -U spyder
