@@ -48,8 +48,5 @@ brew install git
 #brew install tree
 #brew install webkit2png
 
-# video utilities
-# brew install ffmpeg x264
-
 # Remove outdated versions from the cellar
 brew cleanup

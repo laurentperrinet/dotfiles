@@ -59,8 +59,11 @@ pip install hg+https://pyglet.googlecode.com/hg/
 #cd ..
 #rm -fr pyglet
 
+pip install PyOpenGL PyOpenGL_accelerate
+pip install glumpy
 # video utilities
-brew install ffmpeg x264
+brew install x264
+brew install ffmpeg
 
 # Remove outdated versions from the cellar
 brew cleanup
