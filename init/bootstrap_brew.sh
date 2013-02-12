@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install HomeBrew
-# /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
+ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
 # Make sure we’re using the latest Homebrew
 brew update
@@ -29,15 +29,15 @@ brew install wget --enable-iri
 # Install more recent versions of some OS X tools
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
-brew tap josegonzalez/homebrew-php
-brew install php54
+#brew tap josegonzalez/homebrew-php
+#brew install php54
 
 # These two formulae didn’t work well last time I tried them:
 #brew install homebrew/dupes/vim
 #brew install homebrew/dupes/screen
 
 # Install everything else
-brew install ack
+#brew install ack
 #brew install exiv2
 brew install git
 #brew install imagemagick
@@ -49,7 +49,7 @@ brew install git
 #brew install webkit2png
 
 # video utilities
-brew install ffmpeg x264
+# brew install ffmpeg x264
 
 # Remove outdated versions from the cellar
 brew cleanup
