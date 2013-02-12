@@ -11,7 +11,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
-export MYHOST="mingus"
+read -p "Enter the name of your host: "
+export MYHOST=$REPLY
 
 # Set computer name (as done via System Preferences → Sharing)
 sudo scutil --set ComputerName $MYHOST
