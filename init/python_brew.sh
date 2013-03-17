@@ -49,8 +49,10 @@ pip install -U matplotlib
 pip install -U Opengl
 pip install -U glumpy
 
-pip install Mercurial
-pip install hg+https://pyglet.googlecode.com/hg/
+brew install mercurial
+brew install vim --with-python
+pip install pyglet
+#pip install hg+https://pyglet.googlecode.com/hg/
 #easy_install pyobjc-core
 #easy_install pyobjc
 #hg clone https://pyglet.googlecode.com/hg/ pyglet

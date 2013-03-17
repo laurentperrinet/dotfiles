@@ -87,6 +87,13 @@ noremap <leader>ss :call StripWhitespace()<CR>
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
+" python related
+" <tab> for vim: http://stackoverflow.com/questions/9172802/setting-up-vim-for-python
+autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd BufRead *.py set nocindent
+autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
+filetype plugin indent on
+
 " Automatic commands
 if has("autocmd")
 	" Enable file type detection

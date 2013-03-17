@@ -32,8 +32,6 @@ brew install homebrew/dupes/grep
 #brew tap josegonzalez/homebrew-php
 #brew install php54
 
-# These two formulae didn’t work well last time I tried them:
-#brew install homebrew/dupes/vim
 #brew install homebrew/dupes/screen
 
 # Install everything else
@@ -47,9 +45,6 @@ brew install git
 #brew install rhino
 #brew install tree
 #brew install webkit2png
-
-# video utilities
-# brew install ffmpeg x264
 
 # Remove outdated versions from the cellar
 brew cleanup
