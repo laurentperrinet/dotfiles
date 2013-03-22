@@ -27,6 +27,7 @@ pip install -U tornado ipython
 brew install pyqt
 pip install -U sphinx
 pip install -U spyder
+pip install -U progressbar
 
 # testing
 pip install -U nose
