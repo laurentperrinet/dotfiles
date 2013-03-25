@@ -93,17 +93,7 @@ autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,
 autocmd BufRead *.py set nocindent
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 filetype plugin indent on
-" Pathogen load
-filetype off
 " todo Read https://github.com/klen/python-mode#readme
-
-
-
-call pathogen#infect()
-call pathogen#helptags()
-
-
-
 
 filetype plugin indent on
 syntax on
