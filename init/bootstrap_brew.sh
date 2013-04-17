@@ -46,5 +46,7 @@ brew install git
 #brew install tree
 #brew install webkit2png
 
+mkdir ~/Applications
+brew linkapps
 # Remove outdated versions from the cellar
 brew cleanup
