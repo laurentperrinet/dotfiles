@@ -45,6 +45,8 @@ pip install -U scipy
 pip install -U matplotlib
 # pip install git+git://github.com/matplotlib/matplotlib.git
 
+# science
+pip install -U sumatra
 
 # pyglet
 pip install -U Opengl

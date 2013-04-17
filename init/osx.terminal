@@ -223,7 +223,7 @@
 	<key>WindowTitle</key>
 	<string></string>
 	<key>name</key>
-	<string>Mathias</string>
+	<string>Terminal</string>
 	<key>shellExitAction</key>
 	<integer>2</integer>
 	<key>type</key>
