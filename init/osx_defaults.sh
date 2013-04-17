@@ -2,6 +2,11 @@
 
 # forked from ~/.osx — http://mths.be/osx
 
+# TODO:
+# http://ethanschoonover.com/solarized
+# http://dotfiles.github.com/
+# https://github.com/altercation/solarized
+
 # Ask for the administrator password upfront
 sudo -v
 
