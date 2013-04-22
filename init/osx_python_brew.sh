@@ -70,5 +70,8 @@ pip install glumpy
 brew install x264
 brew install ffmpeg
 
+brew tap homebrew/science
+brew install opencv
+
 # Remove outdated versions from the cellar
 brew cleanup

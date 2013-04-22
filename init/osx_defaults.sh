@@ -2,6 +2,11 @@
 
 # forked from ~/.osx — http://mths.be/osx
 
+# TODO:
+# http://ethanschoonover.com/solarized
+# http://dotfiles.github.com/
+# https://github.com/altercation/solarized
+
 # Ask for the administrator password upfront
 sudo -v
 
@@ -434,10 +439,10 @@ defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\\U21a9"
 defaults write com.apple.terminal StringEncodings -array 4
 
 # Use a modified version of the Pro theme by default in Terminal.app
-open "Mathias.terminal"
+open "osx.terminal"
 sleep 1 # Wait a bit to make sure the theme is loaded
-defaults write com.apple.terminal "Default Window Settings" -string "Mathias"
-defaults write com.apple.terminal "Startup Window Settings" -string "Mathias"
+defaults write com.apple.terminal "Default Window Settings" -string "Terminal"
+defaults write com.apple.terminal "Startup Window Settings" -string "Terminal"
 
 # Enable “focus follows mouse” for Terminal.app and all X11 apps
 # i.e. hover over a window and start typing in it without clicking first

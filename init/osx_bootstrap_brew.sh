@@ -45,6 +45,9 @@ brew install git
 #brew install rhino
 #brew install tree
 #brew install webkit2png
+brew install make
 
+mkdir ~/Applications
+brew linkapps
 # Remove outdated versions from the cellar
 brew cleanup
