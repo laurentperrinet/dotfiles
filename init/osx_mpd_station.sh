@@ -1,12 +1,13 @@
 # Easily compiles and configures a MPD server
 
 # first install the daemon
-#brew install mpd
+brew install mpd
 
-mkdir -p ~\.mpd
+mkdir -p ~/.mpd
 mkdir -p ~/.mpd/playlists
-touch ~/.mpd/database
-echo "music_directory "/Volumes/Multimedia/musique"
+#touch ~/.mpd/database
+echo '
+music_directory "/Volumes/Multimedia/musique/04_zik/Aretha Franklin"
 playlist_directory "~/.mpd/playlists"
 db_file "~/.mpd/database"
 log_file "~/.mpd/log"
@@ -20,18 +21,27 @@ follow_inside_symlinks "yes"
 audio_output {
     type "osx"
     name "CoreAudio"
-	mixer_type "software"
+mixer_type "software"
 }
-	" > .mpdconf
+#generic_decoder {
+#        mime_type       "audio/mpeg"
+#        suffix          "mp3"
+#        pcm_format      "44100:16:2"
+#        program         "/home/jbglaw/src/mpd/scripts/mudo"
+#}
+' > ~/.mpdconf
 
+brew install mpc
 # let's run it once to scan the library
+mpd --kill
 mpd --kill
 mpd
 mpc update
 mpd --kill
+mpd --kill
 
 # let's launch everytime we log on
-echo "<?xml version="1.0" encoding="UTF-8"?>
+echo '<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
@@ -43,6 +53,7 @@ echo "<?xml version="1.0" encoding="UTF-8"?>
 	    <array>
 	        <string>/usr/local/bin/mpd</string>
 	        <string>--no-daemon</string>
+	        <string>--verbose</string>
 	        <string>~/.mpdconf</string>
 	    </array>
 	    <key>EnableGlobbing</key>
@@ -53,13 +64,14 @@ echo "<?xml version="1.0" encoding="UTF-8"?>
 	    <true/>
 	</dict>
 	</plist>
-" > ~/Library/LaunchAgents/com.wikia.mpd.plist
+' > ~/Library/LaunchAgents/com.wikia.mpd.plist
 
 # update
-launchctl load ~/Library/LaunchAgents
+launchctl unload ~/Library/LaunchAgents/com.wikia.mpd.plist
+launchctl load ~/Library/LaunchAgents/com.wikia.mpd.plist
 
 #check
-launchctl list
+launchctl list |grep mpd
 
 ## scrobbling with mpdas
 #brew install mpdas
