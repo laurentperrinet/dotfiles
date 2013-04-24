@@ -24,6 +24,7 @@ pip install --upgrade distribute
 # editing environment
 pip install -U pyzmq
 pip install -U tornado ipython
+brew install sip
 brew install pyqt
 pip install -U sphinx
 pip install -U spyder
@@ -41,12 +42,12 @@ brew install umfpack
 brew install libtool
 pip install -U numpy
 pip install -U PIL
+brew install swig
 pip install -U scipy
 pip install -U matplotlib
 # pip install git+git://github.com/matplotlib/matplotlib.git
 
 # science
-pip install -U sumatra
 
 # pyglet
 pip install -U Opengl
@@ -54,7 +55,7 @@ pip install -U glumpy
 
 brew install mercurial
 brew install vim --with-python
-pip install pyglet
+pip install -U pyglet
 #pip install hg+https://pyglet.googlecode.com/hg/
 #easy_install pyobjc-core
 #easy_install pyobjc
@@ -64,14 +65,19 @@ pip install pyglet
 #cd ..
 #rm -fr pyglet
 
-pip install PyOpenGL PyOpenGL_accelerate
-pip install glumpy
+pip install -U PyOpenGL PyOpenGL_accelerate
+pip install -U glumpy
 # video utilities
 brew install x264
 brew install ffmpeg
 
 brew tap homebrew/science
 brew install opencv
+
+# neuralensemble
+pip install -U mercurial
+pip install -U sumatra
+pip install hg+https://bitbucket.org/apdavison/sumatra
 
 # Remove outdated versions from the cellar
 brew cleanup
