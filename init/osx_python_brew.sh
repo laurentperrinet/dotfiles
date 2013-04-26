@@ -48,6 +48,7 @@ pip install -U matplotlib
 # pip install git+git://github.com/matplotlib/matplotlib.git
 
 # science
+pip install -U scikit-learn
 
 # pyglet
 pip install -U Opengl
