@@ -40,6 +40,7 @@ brew install cmake
 brew install fftw
 brew install umfpack
 brew install libtool
+pip install -U tables
 pip install -U numpy
 pip install -U PIL
 brew install swig
