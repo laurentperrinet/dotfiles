@@ -44,6 +44,7 @@ pip install -U numpy
 pip install -U PIL
 brew install swig
 pip install -U scipy
+brew install freetype
 pip install -U matplotlib
 # pip install git+git://github.com/matplotlib/matplotlib.git
 
