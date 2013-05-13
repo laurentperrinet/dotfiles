@@ -4,10 +4,20 @@
 
 ### Using Git and the bootstrap script
 
-You can clone the repository wherever you want. (I like to keep it in `~/Projects/dotfiles`, with `~/dotfiles` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
+You can clone the repository wherever you want. (I like to keep it in `~/libs/dotfiles`, with `~/dotfiles` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
 
 ```bash
 git clone https://github.com/meduz/dotfiles.git && cd dotfiles && source bootstrap.sh
+```
+
+One issue is that you may not have ```git``` installed by default, so you should bootstrap the process by installing the adequate bootstraping script:
+```bash
+cd
+mkdir -p tmp
+cd tmp
+curl https://raw.github.com/meduz/dotfiles/master/init/osx_bootstrap_brew.sh -O osx_bootstrap_brew.sh
+sh osx_bootstrap_brew.sh
+rm osx_bootstrap_brew.sh
 ```
 
 To update, `cd` into your local `dotfiles` repository and then:
