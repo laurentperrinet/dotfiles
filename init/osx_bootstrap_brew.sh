@@ -1,7 +1,12 @@
 #!/bin/bash
 
-# install HomeBrew
+# 1. install Xcode:
+# From this url : http://itunes.apple.com/us/app/xcode/id497799835?mt=12 install Xcode on the Mac App Store by clicking on “View in Mac App Store”.
+
+# 2. install HomeBrew
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+# to reinstall, do:
+# rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
 
 # Make sure we’re using the latest Homebrew
 brew update
@@ -47,7 +52,7 @@ brew install git
 #brew install webkit2png
 brew install make
 
-mkdir ~/Applications
+mkdir -p ~/Applications
 brew linkapps
 # Remove outdated versions from the cellar
 brew cleanup

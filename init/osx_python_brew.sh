@@ -3,7 +3,7 @@
 # From this url : http://itunes.apple.com/us/app/xcode/id497799835?mt=12 install Xcode on the Mac App Store by clicking on “View in Mac App Store”.
 
 # 2. install HomeBrew
-#ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+# ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 # to reinstall, do:
 # rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
 
@@ -40,7 +40,8 @@ brew install cmake
 brew install fftw
 brew install umfpack
 brew install libtool
-pip install -U tables
+brew install hdf5
+pip install -U numexpr cython tables
 pip install -U numpy
 pip install -U PIL
 brew install swig
