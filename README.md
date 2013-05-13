@@ -12,12 +12,7 @@ git clone https://github.com/meduz/dotfiles.git && cd dotfiles && source bootstr
 
 One issue is that you may not have ```git``` installed by default, so you should bootstrap the process by installing the adequate bootstraping script:
 ```bash
-cd
-mkdir -p tmp
-cd tmp
-curl https://raw.github.com/meduz/dotfiles/master/init/osx_bootstrap_brew.sh -O osx_bootstrap_brew.sh
-sh osx_bootstrap_brew.sh
-rm osx_bootstrap_brew.sh
+curl https://raw.github.com/meduz/dotfiles/master/init/osx_bootstrap_brew.sh |sh
 ```
 
 To update, `cd` into your local `dotfiles` repository and then:
@@ -59,11 +54,8 @@ If `~/.extra` exists, it will be sourced along with the other files. You can use
 My `~/.extra` looks something like this:
 
 ```bash
-# PATH additions
-export PATH="~/bin:$PATH"
-
 # Git credentials
-# Not in the repository, to prevent people from accidentally committing under my name
+# CHANGE THIS PART to prevent from accidentally committing under my name
 GIT_AUTHOR_NAME="Laurent Perrinet"
 GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
 git config --global user.name "$GIT_AUTHOR_NAME"
