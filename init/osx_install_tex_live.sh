@@ -1,5 +1,6 @@
 # fetch and install texlive
-# TODO
+wget http://ctan.ijs.si/mirror/tlpretest/mactex-2013.pkg # pre-release of TexLive 2013
+sudo installer -pkg mactex-2013.pkg -target /
 
 # setting some preferences in bibdesk (see http://invibe.net/LaurentPerrinet/SciBlog/2013-03-06):
 defaults write edu.ucsd.cs.mmccrack.bibdesk "Cite Key Format" -string "%a1%y%u0"
