@@ -50,14 +50,10 @@ brew install freetype
 pip install -U matplotlib
 # pip install git+git://github.com/matplotlib/matplotlib.git
 
-# science
-
 # pyglet
 pip install -U Opengl
 pip install -U glumpy
 
-brew install mercurial
-brew install vim --with-python
 pip install -U pyglet
 #pip install hg+https://pyglet.googlecode.com/hg/
 #easy_install pyobjc-core
@@ -70,17 +66,6 @@ pip install -U pyglet
 
 pip install -U PyOpenGL PyOpenGL_accelerate
 pip install -U glumpy
-# video utilities
-brew install x264
-brew install ffmpeg
-
-brew tap homebrew/science
-brew install opencv
-
-# neuralensemble
-pip install -U mercurial
-pip install -U sumatra
-pip install hg+https://bitbucket.org/apdavison/sumatra
 
 # Remove outdated versions from the cellar
 brew cleanup
