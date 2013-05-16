@@ -1,5 +1,6 @@
 # fetch and install texlive
-# TODO
+unzip ~/ownCloud/soft/MacTeX.mpkg.zip 
+sudo installer -pkg /Users/love/ownCloud/soft/MacTeX.mpkg -target /
 
 # setting some preferences in bibdesk (see http://invibe.net/LaurentPerrinet/SciBlog/2013-03-06):
 defaults write edu.ucsd.cs.mmccrack.bibdesk "Cite Key Format" -string "%a1%y%u0"
