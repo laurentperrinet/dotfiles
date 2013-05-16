@@ -3,7 +3,7 @@
 # From this url : http://itunes.apple.com/us/app/xcode/id497799835?mt=12 install Xcode on the Mac App Store by clicking on “View in Mac App Store”.
 
 # 2. install HomeBrew
-#ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+# ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 # to reinstall, do:
 # rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
 
@@ -24,6 +24,7 @@ pip install --upgrade distribute
 # editing environment
 pip install -U pyzmq
 pip install -U tornado ipython
+brew install sip
 brew install pyqt
 pip install -U sphinx
 pip install -U spyder
@@ -39,22 +40,21 @@ brew install cmake
 brew install fftw
 brew install umfpack
 brew install libtool
+brew install hdf5
+pip install -U numexpr cython tables
 pip install -U numpy
 pip install -U PIL
+brew install swig
 pip install -U scipy
+brew install freetype
 pip install -U matplotlib
 # pip install git+git://github.com/matplotlib/matplotlib.git
-
-# science
-pip install -U sumatra
 
 # pyglet
 pip install -U Opengl
 pip install -U glumpy
 
-brew install mercurial
-brew install vim --with-python
-pip install pyglet
+pip install -U pyglet
 #pip install hg+https://pyglet.googlecode.com/hg/
 #easy_install pyobjc-core
 #easy_install pyobjc
@@ -64,14 +64,8 @@ pip install pyglet
 #cd ..
 #rm -fr pyglet
 
-pip install PyOpenGL PyOpenGL_accelerate
-pip install glumpy
-# video utilities
-brew install x264
-brew install ffmpeg
-
-brew tap homebrew/science
-brew install opencv
+pip install -U PyOpenGL PyOpenGL_accelerate
+pip install -U glumpy
 
 # Remove outdated versions from the cellar
 brew cleanup

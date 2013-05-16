@@ -4,10 +4,15 @@
 
 ### Using Git and the bootstrap script
 
-You can clone the repository wherever you want. (I like to keep it in `~/Projects/dotfiles`, with `~/dotfiles` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
+You can clone the repository wherever you want. (I like to keep it in `~/libs/dotfiles`, with `~/dotfiles` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
 
 ```bash
 git clone https://github.com/meduz/dotfiles.git && cd dotfiles && source bootstrap.sh
+```
+
+One issue is that you may not have ```git``` installed by default, so you should bootstrap the process by installing the adequate bootstraping script:
+```bash
+curl https://raw.github.com/meduz/dotfiles/master/init/osx_bootstrap_brew.sh |sh
 ```
 
 To update, `cd` into your local `dotfiles` repository and then:
@@ -49,11 +54,8 @@ If `~/.extra` exists, it will be sourced along with the other files. You can use
 My `~/.extra` looks something like this:
 
 ```bash
-# PATH additions
-export PATH="~/bin:$PATH"
-
 # Git credentials
-# Not in the repository, to prevent people from accidentally committing under my name
+# CHANGE THIS PART to prevent from accidentally committing under my name
 GIT_AUTHOR_NAME="Laurent Perrinet"
 GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
 git config --global user.name "$GIT_AUTHOR_NAME"
