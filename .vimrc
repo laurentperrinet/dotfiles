@@ -1,3 +1,12 @@
+" Pathogen load
+filetype off
+call pathogen#incubate()
+call pathogen#infect()
+call pathogen#helptags()
+
+filetype plugin indent on
+syntax on
+
 " Make Vim more useful
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
@@ -88,22 +97,40 @@ noremap <leader>ss :call StripWhitespace()<CR>
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 " python related
+" Disable pylint checking every save
+let g:pymode_lint_write = 0
+
+" Set key 'R' for run python code
+let g:pymode_run_key = 'R'
+" Disable python folding
+let g:pymode_folding = 0
+
 " <tab> for vim: http://stackoverflow.com/questions/9172802/setting-up-vim-for-python
 autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd BufRead *.py set nocindent
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
-filetype plugin indent on
+"filetype plugin indent on
 " todo Read https://github.com/klen/python-mode#readme
 
-filetype plugin indent on
-syntax on
+"filetype plugin indent on
+"syntax on
 " Automatic commands
-if has("autocmd")
+"if has("autocmd")
 	" Enable file type detection
-	filetype on
+"	filetype on
 	" Treat .json files as .js
-	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-endif
+"	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+"endif
 " (un-)commenting
-noremap <silent> ,c :<C-B>sil <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:noh<CR>
-noremap <silent> ,u :<C-B>sil <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:noh<CR>
+" comment line, selection with Ctrl-N,Ctrl-N
+au BufEnter *.py nnoremap ,c mn:s/^\(\s*\)#*\(.*\)/\1#\2/ge<CR>:noh<CR>`n
+au BufEnter *.py inoremap ,c <C-O>mn<C-O>:s/^\(\s*\)#*\(.*\)/\1#\2/ge<CR><C-O>:noh<CR><C-O>`n
+au BufEnter *.py vnoremap ,c mn:s/^\(\s*\)#*\(.*\)/\1#\2/ge<CR>:noh<CR>gv`n
+"
+" " uncomment line, selection with Ctrl-N,N
+au BufEnter *.py nnoremap ,u mn:s/^\(\s*\)#\([^ ]\)/\1\2/ge<CR>:s/^#$//ge<CR>:noh<CR>`n
+au BufEnter *.py inoremap ,u <C-O>mn<C-O>:s/^\(\s*\)#\([^ ]\)/\1\2/ge<CR><C-O>:s/^#$//ge<CR><C-O>:noh<CR><C-O>`n
+au BufEnter *.py vnoremap ,u mn:s/^\(\s*\)#\([^ ]\)/\1\2/ge<CR>gv:s/#\n/\r/ge<CR>:noh<CR>gv`n
+"
+" "noremap <silent> ,c :<C-B>sil <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:noh<CR>
+"noremap <silent> ,u :<C-B>sil <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:noh<CR>
