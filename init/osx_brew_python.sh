@@ -18,9 +18,15 @@ brew upgrade
 # 3. install python and friends
 
 # https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python
+# HACK for http://www.isotope11.com/blog/fix-your-python-2-dot-7-4-maxrepeat-importerror-issues
+brew unlink python
+brew remove python
+brew unlink vim
+brew remove -force vim
 cd `brew --prefix` #should put you in /usr/local
 git checkout 70e9252bd1c17a874631e030ad009b510cd72d54 Library/Formula/python.rb
 brew install python #it will install a patched version of 2.7.4
+brew install -v -force vim
 
 pip install --upgrade distribute
 # editing environment
