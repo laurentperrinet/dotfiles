@@ -31,7 +31,8 @@ brew install python #it will install a patched version of 2.7.4
 pip install --upgrade distribute
 # editing environment
 pip install -U pyzmq
-pip install -U tornado ipython
+pip install -U tornado
+pip install -U ipython
 brew install sip
 brew install pyqt
 pip install -U sphinx
@@ -49,7 +50,9 @@ brew install fftw
 brew install umfpack
 brew install libtool
 brew install hdf5
-pip install -U numexpr cython tables
+pip install -U numexpr
+pip install -U cython
+pip install -U tables
 pip install -U numpy
 pip install -U PIL
 brew install swig

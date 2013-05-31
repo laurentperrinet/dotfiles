@@ -13,11 +13,18 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade
 
-# It is recommend to run the bootstrap_brew.sh script to obtain core packages
+# It is recommended to run the osx_brew_{bootstrap,common,python}.sh scripts to obtain core packages
 
-# 3. install scientific packages
+# install scientific packages
 brew install yaml
 pip install -U pybtex
+
+# video utilities
+brew install x264
+brew install ffmpeg
+brew tap homebrew/science
+brew install opencv
+
 
 # neuralensemble
 pip install -U sumatra

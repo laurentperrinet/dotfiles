@@ -21,11 +21,7 @@ brew install ncftp
 
 brew install mercurial
 brew install vim --with-python
-# video utilities
-brew install x264
-brew install ffmpeg
-brew tap homebrew/science
-brew install opencv
+brew install macvim
 
 
 # Remove outdated versions from the cellar
