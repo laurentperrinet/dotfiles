@@ -12,7 +12,7 @@ git clone https://github.com/meduz/dotfiles.git && cd dotfiles && source bootstr
 
 One issue is that you may not have ```git``` installed by default, so you should bootstrap the process by installing the adequate bootstraping script:
 ```bash
-curl https://raw.github.com/meduz/dotfiles/master/init/osx_bootstrap_brew.sh |sh
+curl https://github.com/meduz/dotfiles/raw/master/init/osx_brew_bootstrap.sh |sh
 ```
 
 To update, `cd` into your local `dotfiles` repository and then:
@@ -85,7 +85,7 @@ When setting up a new Mac, you may want to install some common Homebrew formulae
 ## Feedback
 
 Suggestions/improvements
-[welcome](https://github.com/mathiasbynens/dotfiles/issues)!
+[welcome](https://github.com/meduz/dotfiles/issues)!
 
 ## Thanks to…
 
