@@ -18,8 +18,6 @@ brew upgrade
 # 3. install python and friends
 
 # https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python
-cd `brew --prefix` #should put you in /usr/local
-git checkout 70e9252bd1c17a874631e030ad009b510cd72d54 Library/Formula/python.rb
 brew install python #it will install a patched version of 2.7.4
 
 pip install --upgrade distribute
