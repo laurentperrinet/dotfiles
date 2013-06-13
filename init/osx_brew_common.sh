@@ -18,6 +18,7 @@ brew upgrade
 # 3. install common utilities 
 
 brew install ncftp
+brew install mpg123 
 
 brew install mercurial
 brew install vim --with-python
