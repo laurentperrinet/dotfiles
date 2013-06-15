@@ -18,14 +18,13 @@ brew upgrade
 # 3. install python and friends
 
 # https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python
-cd `brew --prefix` #should put you in /usr/local
-git checkout 70e9252bd1c17a874631e030ad009b510cd72d54 Library/Formula/python.rb
-brew install python #it will install a patched version of 2.7.4
+brew install python
 
 pip install --upgrade distribute
 # editing environment
 pip install -U pyzmq
-pip install -U tornado ipython
+pip install -U tornado
+pip install -U ipython
 brew install sip
 brew install pyqt
 pip install -U sphinx
@@ -43,7 +42,9 @@ brew install fftw
 brew install umfpack
 brew install libtool
 brew install hdf5
-pip install -U numexpr cython tables
+pip install -U numexpr
+pip install -U cython
+pip install -U tables
 pip install -U numpy
 pip install -U PIL
 brew install swig
@@ -51,6 +52,9 @@ pip install -U scipy
 brew install freetype
 pip install -U matplotlib
 # pip install git+git://github.com/matplotlib/matplotlib.git
+
+# science
+pip install -U scikit-learn
 
 # pyglet
 pip install -U Opengl
