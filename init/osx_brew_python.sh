@@ -53,8 +53,11 @@ brew install freetype
 pip install -U matplotlib
 # pip install git+git://github.com/matplotlib/matplotlib.git
 
-# science
-pip install -U scikit-learn
+# pygame
+brew tap samueljohn/python
+brew tap homebrew/headonly
+brew install --HEAD smpeg
+brew install samueljohn/python/pygame
 
 # pyglet
 pip install -U Opengl
