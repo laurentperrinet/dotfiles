@@ -46,6 +46,7 @@ pip install -U numexpr
 pip install -U cython
 pip install -U tables
 pip install -U numpy
+brew install libjpeg
 pip install -U PIL
 brew install swig
 pip install -U scipy
