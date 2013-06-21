@@ -1,25 +1,15 @@
 #!/bin/bash
-# 1. install Xcode:
-# From this url : http://itunes.apple.com/us/app/xcode/id497799835?mt=12 install Xcode on the Mac App Store by clicking on “View in Mac App Store”.
 
-# 2. install HomeBrew
-# ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
-# to reinstall, do:
-# rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
+# 1. install HomeBrew + python
 
-# Make sure we’re using the latest Homebrew
-brew update
-
-# Upgrade any already-installed formulae
-brew upgrade
-
-# It is recommended to run the osx_brew_{bootstrap,common,python}.sh scripts to obtain core packages
+sh osx_brew_python.sh
 
 # install scientific packages
 brew install yaml
 pip install -U pybtex
 
 # video utilities
+brew install imagemagick
 brew install x264
 brew install ffmpeg
 brew tap homebrew/science
