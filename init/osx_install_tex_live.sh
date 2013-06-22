@@ -5,7 +5,8 @@ cd ~/pool/soft
 sudo installer -pkg mactex-2013.pkg -target /
 
 # point to the right URL, see http://invibe.net/LaurentPerrinet/SciBlog/2013-06-12
-sudo tlmgr option location  http://ftp.math.utah.edu/pub/texlive/tlpretest/
+#sudo tlmgr option location  http://ftp.math.utah.edu/pub/texlive/tlpretest/
+sudo tlmgr option location http://mirrors.ircam.fr/pub/CTAN/systems/texlive/tlnet/ 
 # update
 sudo tlmgr update --self
 sudo tlmgr update --all
