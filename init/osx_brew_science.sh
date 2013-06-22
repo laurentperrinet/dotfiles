@@ -25,6 +25,8 @@ brew install ffmpeg
 brew tap homebrew/science
 brew install opencv
 
+#machine learning
+pip install -U scikit-learn
 
 # neuralensemble
 pip install -U sumatra

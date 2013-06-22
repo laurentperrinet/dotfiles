@@ -46,6 +46,7 @@ pip install -U numexpr
 pip install -U cython
 pip install -U tables
 pip install -U numpy
+brew install libjpeg
 pip install -U PIL
 brew install swig
 pip install -U scipy
@@ -53,8 +54,11 @@ brew install freetype
 pip install -U matplotlib
 # pip install git+git://github.com/matplotlib/matplotlib.git
 
-# science
-pip install -U scikit-learn
+# pygame
+brew tap samueljohn/python
+brew tap homebrew/headonly
+brew install --HEAD smpeg
+brew install samueljohn/python/pygame
 
 # pyglet
 pip install -U Opengl
