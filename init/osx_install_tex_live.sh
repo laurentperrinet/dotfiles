@@ -1,6 +1,7 @@
 # fetch and install texlive
 
-wget http://ctan.ijs.si/mirror/tlpretest/mactex-2013.pkg # pre-release of TexLive 2013
+#wget http://ctan.ijs.si/mirror/tlpretest/mactex-2013.pkg # pre-release of TexLive 2013
+cd ~/pool/soft
 sudo installer -pkg mactex-2013.pkg -target /
 
 # point to the right URL, see http://invibe.net/LaurentPerrinet/SciBlog/2013-06-12
