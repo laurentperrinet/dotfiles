@@ -3,10 +3,7 @@
 # forked from ~/.osx — http://mths.be/osx
 # to merge, use ```opendiff init/osx_defaults.sh ../dotfiles-orig/.osx```
 
-# TODO:
-# http://ethanschoonover.com/solarized
-# http://dotfiles.github.com/
-# https://github.com/altercation/solarized
+# TODO : see http://dotfiles.github.com/
 
 # Ask for the administrator password upfront
 sudo -v
@@ -216,6 +213,7 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # Finder: show hidden files by default
 # defaults write com.apple.finder AppleShowAllFiles -bool true
+defaults write com.apple.finder AppleShowAllFiles -bool false
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -248,9 +246,9 @@ defaults write NSGlobalDomain com.apple.springing.delay -float 0
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # Disable disk image verification
-# defaults write com.apple.frameworks.diskimages skip-verify -bool true
-# defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
-# defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
+defaults write com.apple.frameworks.diskimages skip-verify -bool true
+defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
+defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
 
 # Automatically open a new Finder window when a volume is mounted
 defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
@@ -486,7 +484,7 @@ defaults write com.apple.terminal "Startup Window Settings" -string "Terminal"
 #hash tmutil &> /dev/null && sudo tmutil disablelocal
 
 # Make a backup only once a day
-#/usr/libexec/PlistBuddy -c 'set  :LaunchEvents:com.apple.time:"Backup Interval":Interval 86400' /System/Library/LaunchDaemons/com.apple.backupd-auto.plist
+/usr/libexec/PlistBuddy -c 'set  :LaunchEvents:com.apple.time:"Backup Interval":Interval 86400' /System/Library/LaunchDaemons/com.apple.backupd-auto.plist
 ###############################################################################
 # Address Book, Dashboard, iCal, TextEdit, and Disk Utility                   #
 ###############################################################################
