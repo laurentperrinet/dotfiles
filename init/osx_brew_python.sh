@@ -37,12 +37,15 @@ pip install -U numexpr
 pip install -U cython
 pip install -U tables
 pip install -U numpy
+python -c "import numpy; numpy.test()"
 brew install libjpeg
 pip install -U PIL
 brew install swig
 pip install -U scipy
+python -c "import scipy; scipy.test() "
 brew install freetype
 pip install -U matplotlib
+python -c "import pylab; pylab.test() "
 # pip install git+git://github.com/matplotlib/matplotlib.git
 
 # pygame
