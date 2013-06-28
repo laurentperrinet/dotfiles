@@ -3,17 +3,8 @@
 # From this url : http://itunes.apple.com/us/app/xcode/id497799835?mt=12 install Xcode on the Mac App Store by clicking on “View in Mac App Store”.
 
 # 2. install HomeBrew
-# ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
-# to reinstall, do:
-# rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
-
-# Make sure we’re using the latest Homebrew
-brew update
-
-# Upgrade any already-installed formulae
-brew upgrade
-
 # It is recommend to run the bootstrap_brew.sh script to obtain core packages
+sh osx_brew_bootstrap.sh
 
 # 3. install python and friends
 
@@ -46,12 +37,15 @@ pip install -U numexpr
 pip install -U cython
 pip install -U tables
 pip install -U numpy
+python -c "import numpy; numpy.test()"
 brew install libjpeg
 pip install -U PIL
 brew install swig
 pip install -U scipy
+python -c "import scipy; scipy.test() "
 brew install freetype
 pip install -U matplotlib
+python -c "import pylab; pylab.test() "
 # pip install git+git://github.com/matplotlib/matplotlib.git
 
 # pygame

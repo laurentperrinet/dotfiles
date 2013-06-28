@@ -37,3 +37,4 @@ if [ "$CHROMIUM_CURRENT_VERSION" == "" ] || [ $CHROMIUM_CURRENT_VERSION -lt $CHR
 else
 	echo "No update available, you already have the latest version"
 fi
+open -a /Applications/Chromium.app
