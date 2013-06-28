@@ -4,3 +4,4 @@ colorscheme solarized
 set guifont=Menlo:h14
 " Better line-height
 set linespace=8
+set columns=140

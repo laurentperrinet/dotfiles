@@ -50,7 +50,9 @@ brew install mercurial
 brew install vim --with-python
 brew install macvim
 
-
+brew install unison
+#brew install cairo --with-glib
+#brew install inkscape
 
 mkdir -p ~/Applications
 brew linkapps

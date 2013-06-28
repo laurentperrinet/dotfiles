@@ -105,17 +105,12 @@ let g:pymode_run_key = 'R'
 " Disable python folding
 let g:pymode_folding = 0
 
-" <tab> for vim: http://stackoverflow.com/questions/9172802/setting-up-vim-for-python
-au FileType py set autoindent
-autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-autocmd BufRead *.py set nocindent
-autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 "filetype plugin indent on
 " todo Read https://github.com/klen/python-mode#readme
 
 " Number of spaces that a pre-existing tab is equal to.
 " For the amount of space used for a new tab use shiftwidth.
-au BufRead,BufNewFile *py,*pyw,*.c,*.h set tabstop=4
+"au BufRead,BufNewFile *py,*pyw,*.c,*.h set tabstop=4
 " What to use for an indent.
 " This will affect Ctrl-T and 'autoindent'.
 " Python: 4 spaces
@@ -123,16 +118,16 @@ au BufRead,BufNewFile *py,*pyw,*.c,*.h set tabstop=4
 
 au BufRead,BufNewFile *.py,*pyw set shiftwidth=4
 au BufRead,BufNewFile *.py,*.pyw set expandtab
-fu Select_c_style()
-    if search('^\t', 'n', 150)
-        set shiftwidth=8
-        set noexpandtab
-    el 
-        set shiftwidth=4
-       set expandtab
-    en
-endf
-au BufRead,BufNewFile *.c,*.h call Select_c_style()
+"fu Select_c_style()
+"    if search('^\t', 'n', 150)
+"        set shiftwidth=8
+"        set noexpandtab
+"    el 
+"        set shiftwidth=4
+"       set expandtab
+"    en
+"endf
+"au BufRead,BufNewFile *.c,*.h call Select_c_style()
 au BufRead,BufNewFile Makefile* set noexpandtab
 " Use the below highlight group when displaying bad whitespace is desired.
 highlight BadWhitespace ctermbg=red guibg=red
@@ -142,6 +137,11 @@ au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /^\t\+/
 " Make trailing whitespace be flagged as bad.
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
+" <tab> for vim: http://stackoverflow.com/questions/9172802/setting-up-vim-for-python
+au FileType py set autoindent
+autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd BufRead *.py set nocindent
+autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 
 "
 "filetype plugin indent on
