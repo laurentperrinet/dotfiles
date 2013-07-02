@@ -1,2 +1,12 @@
 root = /Users/lolo/science
 root = /Volumes/work/invibe/USERS/perrinet/science
+# MacOsX
+ignore = Name {Icon}
+ignore = Name {.DS_Store}
+ignore = Name {.directory}
+ignore = Name {.FBC*}
+# python and builds
+ignore = Name {,.}*{.o}
+ignore = Name {,.}*{.a}
+ignore = Name {,.}*{.so}
+ignore = Name {,.}*{.pyc}
