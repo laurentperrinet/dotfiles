@@ -14,6 +14,7 @@ brew install x264
 brew install ffmpeg
 brew tap homebrew/science
 brew install opencv
+pip install https://github.com/sightmachine/SimpleCV/zipball/master
 
 # mayavi
 brew install --pyqt --python --qt vtk
