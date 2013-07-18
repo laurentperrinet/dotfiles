@@ -46,6 +46,6 @@ case $(uname) in
   'Darwin')  BREW=$(brew --prefix) ;;
 esac
 # If possible, add tab completion for many more commands
-if [ -f $(BREW)/etc/bash_completion ]; then
-. $(BREW)/etc/bash_completion
+if [ -f $BREW/etc/bash_completion ]; then
+. $BREW/etc/bash_completion
 fi
