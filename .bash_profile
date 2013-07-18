@@ -35,7 +35,17 @@ complete -W "NSGlobalDomain" defaults
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall
 
+case $(uname) in
+  'Linux')   LS_OPTIONS='--color=auto --group-directories-first' ;;
+  'FreeBSD') LS_OPTIONS='-Gh -D "%F %H:%M"' ;;
+  'Darwin')  LS_OPTIONS='-h' ;;
+esac
+
+case $(uname) in
+  'Linux')   BREW='' ;;
+  'Darwin')  BREW=$(brew --prefix) ;;
+esac
 # If possible, add tab completion for many more commands
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-. $(brew --prefix)/etc/bash_completion
+if [ -f $(BREW)/etc/bash_completion ]; then
+. $(BREW)/etc/bash_completion
 fi

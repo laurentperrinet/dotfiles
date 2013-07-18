@@ -8,8 +8,7 @@ export PATH=/usr/texbin:$PATH
 # Inkscape.app
 export PATH=$PATH:/Applications/Inkscape.app/Contents/Resources/bin
 # HomeBrew
-export PATH=/usr/local/bin:/usr/local/sbin:/Users/lup/.gem/ruby/1.8/bin:$PATH
-# source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
+export PATH=/usr/local/bin:/usr/local/sbin:$HOME/.gem/ruby/1.8/bin:$PATH
 # HomeBrew/python
 export PATH=/usr/local/share/python:$PATH
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
