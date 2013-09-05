@@ -45,8 +45,8 @@ pip install -U scipy
 python -c "import scipy; scipy.test() "
 brew install freetype
 pip install -U matplotlib
-python -c "import pylab; pylab.test() "
 # pip install git+git://github.com/matplotlib/matplotlib.git
+python -c "import pylab; pylab.test() "
 
 # pygame
 brew tap samueljohn/python
@@ -58,8 +58,8 @@ brew install samueljohn/python/pygame
 pip install -U Opengl
 pip install -U glumpy
 
-pip install -U pyglet
-#pip install hg+https://pyglet.googlecode.com/hg/
+#pip install -U pyglet
+pip install hg+https://pyglet.googlecode.com/hg/
 #easy_install pyobjc-core
 #easy_install pyobjc
 #hg clone https://pyglet.googlecode.com/hg/ pyglet
