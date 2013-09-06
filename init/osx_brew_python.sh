@@ -9,7 +9,7 @@ sh osx_brew_bootstrap.sh
 # 3. install python and friends
 
 # https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python
-brew uninstall python
+#brew uninstall python
 brew install python --with-brewed-tk
 
 pip install --upgrade distribute
@@ -37,15 +37,13 @@ brew install hdf5
 pip install -U numexpr
 pip install -U cython
 pip install -U tables
-pip install -U numpy
+brew install numpy
 python -c "import numpy; numpy.test()"
 brew install libjpeg
 pip install -U PIL
-brew install swig
-pip install -U scipy
+brew install scipy
 python -c "import scipy; scipy.test() "
-brew install freetype
-pip install -U matplotlib
+brew install matplotlib --with-tex
 # pip install git+git://github.com/matplotlib/matplotlib.git
 python -c "import pylab; pylab.test() "
 
@@ -56,21 +54,12 @@ brew install --HEAD smpeg
 brew install samueljohn/python/pygame
 
 # pyglet
-pip install -U Opengl
+#pip install -U Opengl
+#pip install -U PyOpenGL PyOpenGL_accelerate
 pip install -U glumpy
 
-#pip install -U pyglet
-pip install hg+https://pyglet.googlecode.com/hg/
-#easy_install pyobjc-core
-#easy_install pyobjc
-#hg clone https://pyglet.googlecode.com/hg/ pyglet
-#cd pyglet
-#python setup.py install --user
-#cd ..
-#rm -fr pyglet
-
-pip install -U PyOpenGL PyOpenGL_accelerate
-pip install -U glumpy
+pip install -U pyglet
+#pip install hg+https://pyglet.googlecode.com/hg/
 
 # Remove outdated versions from the cellar
 brew cleanup
