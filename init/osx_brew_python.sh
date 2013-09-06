@@ -9,7 +9,8 @@ sh osx_brew_bootstrap.sh
 # 3. install python and friends
 
 # https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python
-brew install python
+brew uninstall python
+brew install python --with-brewed-tk
 
 pip install --upgrade distribute
 # editing environment
