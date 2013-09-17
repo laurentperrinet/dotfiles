@@ -46,6 +46,7 @@ pip install -U PIL
 brew install scipy
 python -c "import scipy; scipy.test() "
 pip install -U pyparsing
+pip install -U python-dateutil
 brew install matplotlib --with-tex
 # pip install git+git://github.com/matplotlib/matplotlib.git
 python -c "import pylab; pylab.test() "
