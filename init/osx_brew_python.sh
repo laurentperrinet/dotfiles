@@ -28,7 +28,6 @@ pip install -U progressbar
 
 # testing
 pip install -U nose
-easy_install pyreport
 
 # numpy et al
 brew install gfortran
