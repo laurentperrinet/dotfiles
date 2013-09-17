@@ -16,6 +16,8 @@ pip install --upgrade distribute
 # editing environment
 pip install -U pyzmq
 pip install -U tornado
+# to use nbconvert with the ipython notebook, you need to install pandoc:
+# sh osx_install_pandoc.sh
 pip install -U ipython
 brew install sip
 brew install pyqt

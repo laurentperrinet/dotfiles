@@ -29,7 +29,8 @@ pip install -U scikit-learn
 
 # neuralensemble
 pip install -U sumatra
-pip install hg+https://bitbucket.org/apdavison/sumatra
+pip install -U NeuroTools
+#pip install hg+https://bitbucket.org/apdavison/sumatra
 
 # latex, bibliography and friends
 brew install bib-tool
