@@ -12,6 +12,7 @@ sh osx_brew_bootstrap.sh
 #brew uninstall python
 brew install python --with-brewed-tk
 
+pip install --upgrade setuptools
 pip install --upgrade distribute
 # editing environment
 pip install -U pyzmq
@@ -45,6 +46,7 @@ brew install libjpeg
 pip install -U PIL
 brew install scipy
 python -c "import scipy; scipy.test() "
+pip install -U pyparsing
 brew install matplotlib --with-tex
 # pip install git+git://github.com/matplotlib/matplotlib.git
 python -c "import pylab; pylab.test() "
