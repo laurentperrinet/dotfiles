@@ -9,12 +9,33 @@ sh osx_brew_bootstrap.sh
 # 3. install python and friends
 
 # https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python
-#brew uninstall python
+brew install sqlite
 brew install python --with-brewed-tk
 
 pip install --upgrade setuptools
 pip install --upgrade distribute
+
+# numpy
+brew install gfortran
+brew install cmake
+brew install fftw
+#brew install umfpack
+brew install libtool
+brew install hdf5
+brew install numpy
+python -c "import numpy; numpy.test()"
+pip install -U numexpr
+pip install -U cython
+pip install -U tables
+
+# pylab
+pip install -U pyparsing
+pip install -U python-dateutil
+brew install matplotlib --with-tex
+# pip install git+git://github.com/matplotlib/matplotlib.git
+python -c "import pylab; pylab.test() "
 # editing environment
+brew install zmq
 pip install -U pyzmq
 pip install -U tornado
 # to use nbconvert with the ipython notebook, you need to install pandoc:
@@ -28,28 +49,13 @@ pip install -U progressbar
 
 # testing
 pip install -U nose
+pip install -U pytest 
 
-# numpy et al
-brew install gfortran
-brew install cmake
-brew install fftw
-brew install umfpack
-brew install libtool
-brew install hdf5
-pip install -U numexpr
-pip install -U cython
-pip install -U tables
-brew install numpy
-python -c "import numpy; numpy.test()"
+# scipy et al
 brew install libjpeg
 pip install -U PIL
 brew install scipy
 python -c "import scipy; scipy.test() "
-pip install -U pyparsing
-pip install -U python-dateutil
-brew install matplotlib --with-tex
-# pip install git+git://github.com/matplotlib/matplotlib.git
-python -c "import pylab; pylab.test() "
 
 # pygame
 brew tap samueljohn/python
