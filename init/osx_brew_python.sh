@@ -34,7 +34,12 @@ pip install -U python-dateutil
 brew install matplotlib --with-tex
 # pip install git+git://github.com/matplotlib/matplotlib.git
 python -c "import pylab; pylab.test() "
+
 # editing environment
+pip install -U glob
+brew install vim --with-python
+brew install macvim
+
 brew install zmq
 pip install -U pyzmq
 pip install -U tornado
