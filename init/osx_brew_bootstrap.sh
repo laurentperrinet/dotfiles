@@ -42,16 +42,16 @@ brew install git
 brew install make
 
 # 3. install common utilities 
-
 brew install ncftp
 brew install mpg123 
+brew install cmus # a nice command-line utility to play music files
 
 brew install mercurial
-brew install unison
+#brew install unison
 #brew install cairo --with-glib
 #brew install inkscape
 
-mkdir -p ~/Applications
+#mkdir -p ~/Applications
 brew linkapps
 # Remove outdated versions from the cellar
 brew cleanup
