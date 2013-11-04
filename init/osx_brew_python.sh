@@ -16,7 +16,6 @@ pip install --upgrade setuptools
 pip install --upgrade distribute
 
 # editing 
-pip install -U glob
 brew install vim --with-python
 brew install macvim
 
@@ -57,7 +56,7 @@ pip install -U nose
 pip install -U pytest 
 
 # scipy et al
-brew install libjpeg
+brew install libjpeg, zlib, libpng
 pip install -U PIL
 brew install scipy
 python -c "import scipy; scipy.test() "
@@ -77,4 +76,4 @@ pip install -U pyglet
 #pip install hg+https://pyglet.googlecode.com/hg/
 
 # Remove outdated versions from the cellar
-brew cleanup
+brew cleanupleanup
