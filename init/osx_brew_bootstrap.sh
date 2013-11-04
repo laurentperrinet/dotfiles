@@ -36,7 +36,6 @@ brew install bash-completion
 
 # Install everything else
 brew install git
-git config --global credential.helper osxkeychain
 #brew install rename
 #brew install rhino
 #brew install tree

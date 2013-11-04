@@ -35,7 +35,9 @@
 	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and
 	# all kinds of trailing whitespace as an error
 	whitespace = space-before-tab,indent-with-non-tab,trailing-space
-
+[credential]
+	helper = osxkeychain
+	
 [color]
 	# Use colors in Git commands that are capable of colored output when
 	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
@@ -54,6 +56,18 @@
 	changed = green
 	untracked = cyan
 [merge]
+
+[merge]
+	# This is REALLY useful.  Adds 'original_version' to diffs like so:
+	# <<<<<<<
+	#  OUR_VERSION
+	#  |||||||
+	# ORIGINAL_VERSION
+	#  =======
+	# THEIR_VERSION
+	# >>>>>>>
+	conflictstyle = diff3
+    defaultToUpstream = true
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 
