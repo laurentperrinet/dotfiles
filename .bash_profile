@@ -49,3 +49,9 @@ esac
 if [ -f $BREW/etc/bash_completion ]; then
 . $BREW/etc/bash_completion
 fi
+	
+if [ -e /usr/local/bin/gwhich ]; then
+	 alias which="(alias; declare -f) | /usr/local/bin/gwhich --tty-only --all --read-functions --read-alias --show-dot --show-tilde"
+else
+    alias which="/usr/bin/which -a"
+fi
