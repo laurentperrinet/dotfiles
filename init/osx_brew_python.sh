@@ -17,7 +17,6 @@ pip install --upgrade distribute
 
 # editing 
 brew install vim --with-python
-brew uninstall macvim
 
 # numpy
 brew install gfortran
@@ -48,7 +47,6 @@ pip install -U ipython
 brew install sip
 brew install pyqt
 pip install -U sphinx
-pip uninstall spyder
 pip install -U progressbar
 
 # testing
