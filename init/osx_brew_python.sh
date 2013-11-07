@@ -17,7 +17,7 @@ pip install --upgrade distribute
 
 # editing 
 brew install vim --with-python
-brew install macvim
+brew uninstall macvim
 
 # numpy
 brew install gfortran
@@ -48,7 +48,7 @@ pip install -U ipython
 brew install sip
 brew install pyqt
 pip install -U sphinx
-pip install -U spyder
+pip uninstall spyder
 pip install -U progressbar
 
 # testing
@@ -76,4 +76,4 @@ pip install -U pyglet
 #pip install hg+https://pyglet.googlecode.com/hg/
 
 # Remove outdated versions from the cellar
-brew cleanupleanup
+brew cleanup
