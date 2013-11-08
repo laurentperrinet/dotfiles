@@ -13,6 +13,8 @@ brew install python
 
 pip install --upgrade distribute
 # editing environment
+pip install -U threading
+pip install -U glob
 pip install -U pyzmq
 pip install -U tornado
 pip install -U ipython
