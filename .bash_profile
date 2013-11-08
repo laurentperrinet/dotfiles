@@ -5,7 +5,7 @@ export PATH="$HOME/bin:$PATH"
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
 for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
-	[ -r "$file" ] && source "$file"
+	[ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
 
@@ -26,7 +26,7 @@ for option in autocd globstar; do
 done
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
-[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
+[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh
 
 # Add tab completion for `defaults read|write NSGlobalDomain`
 # You could just use `-g` instead, but I like being explicit
@@ -48,4 +48,10 @@ esac
 # If possible, add tab completion for many more commands
 if [ -f $BREW/etc/bash_completion ]; then
 . $BREW/etc/bash_completion
+fi
+	
+if [ -e /usr/local/bin/gwhich ]; then
+	 alias which="(alias; declare -f) | /usr/local/bin/gwhich --tty-only --all --read-functions --read-alias --show-dot --show-tilde"
+else
+    alias which="/usr/bin/which -a"
 fi

@@ -13,7 +13,8 @@ brew install imagemagick
 brew install x264
 brew install ffmpeg
 brew tap homebrew/science
-brew install opencv
+brew install tbb
+brew install --with-qt --with-tbb --with-ffmpeg opencv
 pip install https://github.com/sightmachine/SimpleCV/zipball/master
 
 # mayavi
@@ -27,7 +28,8 @@ pip install -U scikit-learn
 
 # neuralensemble
 pip install -U sumatra
-pip install hg+https://bitbucket.org/apdavison/sumatra
+pip install -U NeuroTools
+#pip install hg+https://bitbucket.org/apdavison/sumatra
 
 # latex, bibliography and friends
 brew install bib-tool

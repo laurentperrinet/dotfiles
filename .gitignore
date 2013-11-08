@@ -7,6 +7,7 @@ Desktop.ini
 
 # Thumbnail cache files
 ._*
+.@__*
 Thumbs.db
 
 # Files that might appear on external disks

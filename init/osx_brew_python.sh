@@ -9,46 +9,57 @@ sh osx_brew_bootstrap.sh
 # 3. install python and friends
 
 # https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python
-brew install python
+brew install sqlite
+brew install python --with-brewed-tk
 
+pip install --upgrade setuptools
 pip install --upgrade distribute
+
+# editing 
+brew install vim --with-python
+
+# numpy
+brew install gfortran
+brew install cmake
+brew install fftw
+#brew install umfpack
+brew install libtool
+brew install hdf5
+brew install numpy
+python -c "import numpy; numpy.test()"
+pip install -U numexpr
+pip install -U cython
+pip install -U tables
+
+# pylab
+pip install -U pyparsing
+pip install -U python-dateutil
+brew install matplotlib --with-tex
+# pip install git+git://github.com/matplotlib/matplotlib.git
+python -c "import pylab; pylab.test() "
 # editing environment
 pip install -U threading
 pip install -U glob
+brew install zmq
 pip install -U pyzmq
 pip install -U tornado
+# to use nbconvert with the ipython notebook, you need to install pandoc:
+# sh osx_install_pandoc.sh
 pip install -U ipython
 brew install sip
 brew install pyqt
 pip install -U sphinx
-pip install -U spyder
 pip install -U progressbar
 
 # testing
 pip install -U nose
-easy_install pyreport
+pip install -U pytest 
 
-# numpy et al
-brew install gfortran
-brew install cmake
-brew install fftw
-brew install umfpack
-brew install libtool
-brew install hdf5
-pip install -U numexpr
-pip install -U cython
-pip install -U tables
-pip install -U numpy
-python -c "import numpy; numpy.test()"
-brew install libjpeg
+# scipy et al
+brew install libjpeg, zlib, libpng
 pip install -U PIL
-brew install swig
-pip install -U scipy
+brew install scipy
 python -c "import scipy; scipy.test() "
-brew install freetype
-pip install -U matplotlib
-python -c "import pylab; pylab.test() "
-# pip install git+git://github.com/matplotlib/matplotlib.git
 
 # pygame
 brew tap samueljohn/python
@@ -57,21 +68,12 @@ brew install --HEAD smpeg
 brew install samueljohn/python/pygame
 
 # pyglet
-pip install -U Opengl
+#pip install -U Opengl
+#pip install -U PyOpenGL PyOpenGL_accelerate
 pip install -U glumpy
 
 pip install -U pyglet
 #pip install hg+https://pyglet.googlecode.com/hg/
-#easy_install pyobjc-core
-#easy_install pyobjc
-#hg clone https://pyglet.googlecode.com/hg/ pyglet
-#cd pyglet
-#python setup.py install --user
-#cd ..
-#rm -fr pyglet
-
-pip install -U PyOpenGL PyOpenGL_accelerate
-pip install -U glumpy
 
 # Remove outdated versions from the cellar
 brew cleanup
