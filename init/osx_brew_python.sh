@@ -17,7 +17,6 @@ pip install --upgrade distribute
 
 # editing 
 brew install vim --with-python
-brew install macvim
 
 # numpy
 brew install gfortran
@@ -39,6 +38,8 @@ brew install matplotlib --with-tex
 # pip install git+git://github.com/matplotlib/matplotlib.git
 python -c "import pylab; pylab.test() "
 # editing environment
+pip install -U threading
+pip install -U glob
 brew install zmq
 pip install -U pyzmq
 pip install -U tornado
@@ -48,7 +49,6 @@ pip install -U ipython
 brew install sip
 brew install pyqt
 pip install -U sphinx
-pip install -U spyder
 pip install -U progressbar
 
 # testing
@@ -76,4 +76,4 @@ pip install -U pyglet
 #pip install hg+https://pyglet.googlecode.com/hg/
 
 # Remove outdated versions from the cellar
-brew cleanupleanup
+brew cleanup
