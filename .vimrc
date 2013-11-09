@@ -1,6 +1,6 @@
 " Pathogen load
 filetype off
-call pathogen#incubate()
+"call pathogen#incubate()
 call pathogen#infect()
 call pathogen#helptags()
 
