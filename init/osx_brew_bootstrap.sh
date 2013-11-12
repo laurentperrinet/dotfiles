@@ -37,6 +37,7 @@ brew install bash-completion
 # Install everything else
 brew install git
 brew install make
+brew install hub
 
 # 3. install common utilities 
 brew install ncftp

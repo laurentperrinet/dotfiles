@@ -55,3 +55,5 @@ if [ -e /usr/local/bin/gwhich ]; then
 else
     alias which="/usr/bin/which -a"
 fi
+# https://github.com/github/hub
+eval "$(hub alias -s)"
