@@ -18,7 +18,8 @@ installcask skype
 installcask sparkleshare
 installcask the-unarchiver
 #installcask tor-browser
-installcask tunnelblick unison
+installcask tunnelblick
 installcask ukelele
+installcask unison
 installcask vlc
-installcask x-quartz
+installcask xquartz
