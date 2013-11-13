@@ -13,7 +13,7 @@ installcask firefox
 installcask google-chrome
 installcask iterm2
 installcask macvim
-installcask open-office
+installcask openoffice
 installcask skype
 installcask sparkleshare
 installcask the-unarchiver
