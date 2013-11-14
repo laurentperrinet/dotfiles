@@ -36,10 +36,8 @@ brew install bash-completion
 
 # Install everything else
 brew install git
-#brew install rename
-#brew install rhino
-#brew install tree
 brew install make
+brew install hub
 
 # 3. install common utilities 
 brew install ncftp
@@ -47,9 +45,6 @@ brew install mpg123
 brew install cmus # a nice command-line utility to play music files
 
 brew install mercurial
-#brew install unison
-#brew install cairo --with-glib
-#brew install inkscape
 
 #mkdir -p ~/Applications
 brew linkapps
