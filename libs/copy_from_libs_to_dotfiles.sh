@@ -2,3 +2,4 @@
 cp solarized/osx-terminal.app-colors-solarized/Solarized\ Dark\ ansi.terminal ../init/osx_solarized.terminal
 cp solarized/apple-colorpalette-solarized/solarized.clr ../Library/Colors/
 cp -r solarized/vim-colors-solarized ../.vim/bundle
+rsync -av --exclude ".git/" python-mode ../.vim/bundle

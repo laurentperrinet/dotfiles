@@ -19,8 +19,6 @@ pip install https://github.com/sightmachine/SimpleCV/zipball/master
 
 # mayavi
 brew install --pyqt --python --qt vtk
-#brew install vtk --python
-#pip install traitsbackendqt
 pip install configobj
 pip install envisage
 pip install "Mayavi[app]"
