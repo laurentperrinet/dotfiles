@@ -21,5 +21,6 @@ installcask the-unarchiver
 installcask tunnelblick
 installcask ukelele
 installcask unison
+installcask vimediamanager
 installcask vlc
 installcask xquartz
