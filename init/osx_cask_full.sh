@@ -1,6 +1,4 @@
-# Install native apps
-brew tap phinze/homebrew-cask
-brew install brew-cask
+sh osx_cask_base.sh
 
 brew cask install bibdesk
 brew cask install mactex

@@ -1,9 +1,14 @@
 # fetch and install texlive
 
+# OLD, manual style
 #wget http://ctan.ijs.si/mirror/tlpretest/mactex-2013.pkg # pre-release of TexLive 2013
 #cd ~/pool/soft
-sudo installer -pkg ~/pool/soft/mactex-2013.pkg -target /
-
+#sudo installer -pkg ~/pool/soft/mactex-2013.pkg -target /
+# NEW homebrew style install
+# Install native apps
+brew tap phinze/homebrew-cask
+brew install brew-cask
+brew cask install mactex
 # point to the right URL, see http://invibe.net/LaurentPerrinet/SciBlog/2013-06-12
 sudo tlmgr option location http://ctan.mines-albi.fr/systems/texlive/tlnet 
 #sudo tlmgr option location  http://ftp.math.utah.edu/pub/texlive/tlpretest/
