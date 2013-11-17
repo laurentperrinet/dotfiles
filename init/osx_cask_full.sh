@@ -2,14 +2,9 @@
 brew tap phinze/homebrew-cask
 brew install brew-cask
 
-function installcask() {
-	brew cask install "${@}" # 2> /dev/null
-	#brew cask install --force "${@}" # 2> /dev/null
-}
-
-installcask bibdesk
-installcask mactex
-installcask sourcetree
-installcask spyder
-installcask texshop
-installcask virtualbox
+brew cask install bibdesk
+brew cask install mactex
+brew cask install sourcetree
+brew cask install spyder
+brew cask install texshop
+brew cask install virtualbox

@@ -2,25 +2,21 @@
 brew tap phinze/homebrew-cask
 brew install brew-cask
 
-function installcask() {
-	brew cask install "${@}" # 2> /dev/null
-	#brew cask install --force "${@}" # 2> /dev/null
-}
-installcask clamxav
-installcask bittorrent-sync
-installcask dropbox
-installcask firefox
-installcask google-chrome
-installcask iterm2
-installcask macvim
-installcask openoffice
-installcask skype
-installcask sparkleshare
-installcask the-unarchiver
-#installcask tor-browser
-installcask tunnelblick
-installcask ukelele
-installcask unison
-installcask vimediamanager
-installcask vlc
-installcask xquartz
+brew cask install clamxav
+brew cask install bittorrent-sync
+brew cask install dropbox
+brew cask install firefox
+brew cask install google-chrome
+brew cask install iterm2
+brew cask install macvim
+brew cask install openoffice
+brew cask install skype
+brew cask install sparkleshare
+brew cask install the-unarchiver
+#brew cask install tor-browser
+brew cask install tunnelblick
+brew cask install ukelele
+brew cask install unison
+brew cask install vimediamanager
+brew cask install vlc
+brew cask install xquartz
