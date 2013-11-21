@@ -3,7 +3,7 @@ brew tap phinze/homebrew-cask
 brew install brew-cask
 
 brew cask install clamxav
-brew cask install bittorrent-sync
+brew cask uninstall bittorrent-sync
 brew cask install dropbox
 brew cask install firefox
 brew cask install google-chrome
@@ -11,7 +11,7 @@ brew cask install iterm2
 brew cask install macvim
 brew cask install openoffice
 brew cask install skype
-brew cask install sparkleshare
+brew cask uninstall sparkleshare
 brew cask install the-unarchiver
 #brew cask install tor-browser
 brew cask install tunnelblick

@@ -97,13 +97,6 @@ noremap <leader>ss :call StripWhitespace()<CR>
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 " python related
-" Disable pylint checking every save
-let g:pymode_lint_write = 0
-
-" Set key 'R' for run python code
-let g:pymode_run_key = 'R'
-" Disable python folding
-let g:pymode_folding = 0
 
 "filetype plugin indent on
 " todo Read https://github.com/klen/python-mode#readme
