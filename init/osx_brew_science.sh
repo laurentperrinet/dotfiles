@@ -23,6 +23,7 @@ pip install configobj
 pip install envisage
 pip install "Mayavi[app]"
 
+pip install -U sympy
 #machine learning
 pip install -U scikit-learn
 
