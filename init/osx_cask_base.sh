@@ -5,6 +5,7 @@ brew install brew-cask
 brew cask install clamxav
 brew cask uninstall bittorrent-sync
 brew cask install dropbox
+brew cask install java
 brew cask install firefox
 brew cask install google-chrome
 brew cask install iterm2
