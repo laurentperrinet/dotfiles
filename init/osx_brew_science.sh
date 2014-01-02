@@ -9,6 +9,7 @@ brew install yaml
 pip install -U pybtex
 
 # video utilities
+pip install -U svgwrite
 brew install imagemagick
 brew install x264
 brew install ffmpeg

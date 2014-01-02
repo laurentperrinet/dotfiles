@@ -56,7 +56,7 @@ pip install -U nose
 pip install -U pytest 
 
 # scipy et al
-brew install libjpeg, zlib, libpng
+brew install libjpeg zlib libpng
 pip install -U PIL
 brew install scipy
 python -c "import scipy; scipy.test() "

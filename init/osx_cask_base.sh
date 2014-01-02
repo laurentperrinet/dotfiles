@@ -10,6 +10,7 @@ brew cask install firefox
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install macvim
+ln -s "/opt/homebrew-cask/Caskroom/macvim/7.4-72/MacVim-snapshot-72/mvim" "/usr/local/bin/mvim"
 brew cask install openoffice
 brew cask install skype
 brew cask uninstall sparkleshare
