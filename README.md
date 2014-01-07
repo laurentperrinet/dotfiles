@@ -12,7 +12,7 @@ git clone https://github.com/meduz/dotfiles.git && cd dotfiles && source bootstr
 
 One issue is that you may not have ```git``` installed by default, so you should bootstrap the process by installing the adequate bootstraping script:
 ```bash
-curl https://github.com/meduz/dotfiles/raw/master/init/osx_brew_bootstrap.sh |sh
+curl https://raw.github.com/meduz/dotfiles/master/init/osx_brew_bootstrap.sh |sh
 ```
 
 To update, `cd` into your local `dotfiles` repository and then:
