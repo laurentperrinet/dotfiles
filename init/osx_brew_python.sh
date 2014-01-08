@@ -25,9 +25,8 @@ brew install fftw
 #brew install umfpack
 brew install libtool
 brew install hdf5
-# TODO : check this is the good way to do it
 brew tap homebrew/python
-brew install numpy
+brew install homebrew/python/numpy
 python -c "import numpy; numpy.test()"
 pip install -U numexpr
 pip install -U cython
@@ -36,7 +35,7 @@ pip install -U tables
 # pylab
 pip install -U pyparsing
 pip install -U python-dateutil
-brew install matplotlib --with-tex
+brew install homebrew/python/matplotlib --with-tex
 # pip install git+git://github.com/matplotlib/matplotlib.git
 python -c "import pylab; pylab.test() "
 # editing environment
@@ -58,16 +57,17 @@ pip install -U nose
 pip install -U pytest 
 
 # scipy et al
-brew install libjpeg zlib libpng
-pip install -U PIL
-brew install scipy
+brew install freetype libjpeg zlib libpng
+pip uninstall PL
+brew install homebrew/python/pillow
+brew install homebrew/python/scipy
 python -c "import scipy; scipy.test() "
 
 # pygame
-brew tap samueljohn/python
-brew tap homebrew/headonly
-brew install --HEAD smpeg
-brew install samueljohn/python/pygame
+#brew tap samueljohn/python
+#brew tap homebrew/headonly
+#brew install --HEAD smpeg
+#brew install samueljohn/python/pygame
 
 # pyglet
 #pip install -U Opengl
