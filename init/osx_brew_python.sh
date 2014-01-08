@@ -25,6 +25,7 @@ brew install fftw
 #brew install umfpack
 brew install libtool
 brew install hdf5
+brew tap homebrew/python
 brew install numpy
 python -c "import numpy; numpy.test()"
 pip install -U numexpr
