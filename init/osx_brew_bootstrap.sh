@@ -40,9 +40,9 @@ brew install make
 brew install hub
 
 # 3. install common utilities 
-brew install ncftp
+brew install lftp
 brew install mpg123 
-brew install cmus # a nice command-line utility to play music files
+brew uninstall cmus # a nice command-line utility to play music files
 
 brew install mercurial
 
