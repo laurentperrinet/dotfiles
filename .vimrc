@@ -10,7 +10,7 @@ syntax on
 " Make Vim more useful
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
-set clipboard=unnamed
+" set clipboard=unnamed
 " Enhance command-line completion
 set wildmenu
 " Allow cursor keys in insert mode
@@ -83,6 +83,11 @@ if exists("&relativenumber")
 endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
+
+" wraping
+set wrap
+set textwidth=80
+set wrapmargin=2
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
