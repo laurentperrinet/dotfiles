@@ -47,7 +47,10 @@ brew uninstall cmus # a nice command-line utility to play music files
 
 brew install mercurial
 
+sh osx_cask_full.sh
+brew install macvim
 #mkdir -p ~/Applications
 brew linkapps
 # Remove outdated versions from the cellar
 brew cleanup
+
