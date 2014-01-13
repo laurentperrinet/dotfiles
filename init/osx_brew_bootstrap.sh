@@ -27,7 +27,7 @@ brew install homebrew/dupes/screen
 
 # Install GNU core utilities (those that come with OS X are outdated)
 brew install coreutils
-echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
+#echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew install findutils
 # Install Bash 4
@@ -43,7 +43,7 @@ brew install hub
 brew install lftp
 brew uninstall ncftp
 brew install mpg123 
-brew install cmus # a nice command-line utility to play music files
+brew uninstall cmus # a nice command-line utility to play music files
 
 brew install mercurial
 
