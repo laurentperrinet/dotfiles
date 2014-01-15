@@ -13,6 +13,7 @@ set nocompatible
 " set clipboard=unnamed
 " Enhance command-line completion
 set wildmenu
+set wildignore=*.log,*.aux,*.dvi,*.aut,*.aux,*.bbl,*.blg,*.dvi,*.fff,*.log,*.out,*.pdf,*.ps,*.toc,*.ttt,*.pyc,*.pyo
 " Allow cursor keys in insert mode
 set esckeys
 " Allow backspace in insert mode
@@ -162,15 +163,15 @@ autocmd FileType vim              let b:comment_leader = '" '
 "
 noremap <silent> ,c :<C-B>sil <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:noh<CR>
 noremap <silent> ,u :<C-B>sil <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:noh<CR>
-" comment line, selection with ,c
-au BufEnter *.py nnoremap ,c mn:s/^\(\s*\)#*\(.*\)/\1#\2/ge<CR>:noh<CR>`n
-au BufEnter *.py inoremap ,c <C-O>mn<C-O>:s/^\(\s*\)#*\(.*\)/\1#\2/ge<CR><C-O>:noh<CR><C-O>`n
-au BufEnter *.py vnoremap ,c mn:s/^\(\s*\)#*\(.*\)/\1#\2/ge<CR>:noh<CR>gv`n
-"
-" " uncomment line, selection with ,u
-au BufEnter *.py nnoremap ,u mn:s/^\(\s*\)#\([^ ]\)/\1\2/ge<CR>:s/^#$//ge<CR>:noh<CR>`n
-au BufEnter *.py inoremap ,u <C-O>mn<C-O>:s/^\(\s*\)#\([^ ]\)/\1\2/ge<CR><C-O>:s/^#$//ge<CR><C-O>:noh<CR><C-O>`n
-au BufEnter *.py vnoremap ,u mn:s/^\(\s*\)#\([^ ]\)/\1\2/ge<CR>gv:s/#\n/\r/ge<CR>:noh<CR>gv`n
+" " comment line, selection with ,c
+" au BufEnter *.py nnoremap ,c mn:s/^\(\s*\)#*\(.*\)/\1#\2/ge<CR>:noh<CR>`n
+" au BufEnter *.py inoremap ,c <C-O>mn<C-O>:s/^\(\s*\)#*\(.*\)/\1#\2/ge<CR><C-O>:noh<CR><C-O>`n
+" au BufEnter *.py vnoremap ,c mn:s/^\(\s*\)#*\(.*\)/\1#\2/ge<CR>:noh<CR>gv`n
+" "
+" " " uncomment line, selection with ,u
+" au BufEnter *.py nnoremap ,u mn:s/^\(\s*\)#\([^ ]\)/\1\2/ge<CR>:s/^#$//ge<CR>:noh<CR>`n
+" au BufEnter *.py inoremap ,u <C-O>mn<C-O>:s/^\(\s*\)#\([^ ]\)/\1\2/ge<CR><C-O>:s/^#$//ge<CR><C-O>:noh<CR><C-O>`n
+" au BufEnter *.py vnoremap ,u mn:s/^\(\s*\)#\([^ ]\)/\1\2/ge<CR>gv:s/#\n/\r/ge<CR>:noh<CR>gv`n
 " enabling the dark solarized scheme
 let g:solarized_termcolors=256
  syntax enable
