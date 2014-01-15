@@ -6,7 +6,8 @@
 # install Xcode on the Mac App Store by clicking on “View in Mac App Store”.
 
 # 2. install HomeBrew
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+#ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
 # to reinstall, do:
 # rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
 
@@ -35,6 +36,7 @@ brew install bash
 brew install bash-completion
 
 # Install everything else
+brew install pkg-config
 brew install git
 brew install make
 brew install hub
@@ -46,6 +48,11 @@ brew install mpg123
 brew uninstall cmus # a nice command-line utility to play music files
 
 brew install mercurial
+
+# 4. nikola
+
+brew install npm
+npm install -g less
 
 sh osx_cask_full.sh
 brew install macvim
