@@ -152,12 +152,12 @@ autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 "	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 "endif
 " (un-)commenting
-" comment line, selection with Ctrl-N,Ctrl-N
+" comment line, selection with ,c
 au BufEnter *.py nnoremap ,c mn:s/^\(\s*\)#*\(.*\)/\1#\2/ge<CR>:noh<CR>`n
 au BufEnter *.py inoremap ,c <C-O>mn<C-O>:s/^\(\s*\)#*\(.*\)/\1#\2/ge<CR><C-O>:noh<CR><C-O>`n
 au BufEnter *.py vnoremap ,c mn:s/^\(\s*\)#*\(.*\)/\1#\2/ge<CR>:noh<CR>gv`n
 "
-" " uncomment line, selection with Ctrl-N,N
+" " uncomment line, selection with ,u
 au BufEnter *.py nnoremap ,u mn:s/^\(\s*\)#\([^ ]\)/\1\2/ge<CR>:s/^#$//ge<CR>:noh<CR>`n
 au BufEnter *.py inoremap ,u <C-O>mn<C-O>:s/^\(\s*\)#\([^ ]\)/\1\2/ge<CR><C-O>:s/^#$//ge<CR><C-O>:noh<CR><C-O>`n
 au BufEnter *.py vnoremap ,u mn:s/^\(\s*\)#\([^ ]\)/\1\2/ge<CR>gv:s/#\n/\r/ge<CR>:noh<CR>gv`n
