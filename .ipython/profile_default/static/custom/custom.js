@@ -7,12 +7,13 @@
 // late enough to work.
 
 $([IPython.events]).on('app_initialized.NotebookApp', function(){
-     require(['/static/custom/usability/breakpoints.js'])
-     require(['/static/custom/usability/comment-uncomment.js'])
+     //require(['/static/custom/usability/breakpoints.js']);
+     //require(['/static/custom/usability/comment-uncomment.js']);
 
      require(['custom/nikola_deploy/main'],function(nikola_deploy){
+       console.log('hello')
        // nikola_deploy.parameters('posts directory', 'cleaner');
-       nikola_deploy.parameters('/media/datos/Desarrollos/damian_blog','True');
+       nikola_deploy.parameters('/Users/lup/Dropbox/pool/libs/invibe/posts','False');
        console.log('Nikola deploy extension loaded correctly');
      });
     /**  Use path to js file relative to /static/ dir without leading slash, or
@@ -38,7 +39,7 @@ $([IPython.events]).on('app_initialized.NotebookApp', function(){
     //     // do stuff
     // })
 
-    require(['custom/zenmode/main'],function(zenmode){
+    // require(['custom/zenmode/main'],function(zenmode){
     //
     //   // You can use other images as a background, just check the
     //   // zenmode/images folder or put there your own background...
@@ -50,9 +51,9 @@ $([IPython.events]).on('app_initialized.NotebookApp', function(){
     //
     //   zenmode.background('images/ipynblogo1.png');
     //
-    console.log('Zenmode extension loaded correctly')
+    // console.log('Zenmode extension loaded correctly')
     //
-    })
+    //})
 
     // software carpentry tags example.
     /*  require(['custom/swc/main'],function(m){
