@@ -86,7 +86,7 @@ endif
 set scrolloff=3
 
 " wraping
-set wrap
+" set wrap
 set textwidth=80
 set wrapmargin=2
 
