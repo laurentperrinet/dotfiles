@@ -444,6 +444,7 @@ c = get_config()
 # Set the profile location directly. This overrides the logic used by the
 # `profile` option.
 # c.ProfileDir.location = u''
+c.ProfileDir.location = u'~/.ipython/profile_default'
 
 #------------------------------------------------------------------------------
 # Session configuration
