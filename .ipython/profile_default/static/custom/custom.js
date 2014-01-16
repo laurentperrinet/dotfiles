@@ -7,9 +7,14 @@
 // late enough to work.
 
 $([IPython.events]).on('app_initialized.NotebookApp', function(){
-     require(['/static/custom/breakpoints.js'])
-		require(['/static/custom/nikola.js'])
+     require(['/static/custom/usability/breakpoints.js'])
+     require(['/static/custom/usability/comment-uncomment.js'])
 
+     require(['custom/nikola_deploy/main'],function(nikola_deploy){
+       // nikola_deploy.parameters('posts directory', 'cleaner');
+       nikola_deploy.parameters('/media/datos/Desarrollos/damian_blog','True');
+       console.log('Nikola deploy extension loaded correctly');
+     });
     /**  Use path to js file relative to /static/ dir without leading slash, or
      *  js extension.
      *  Link directly to file is js extension.
