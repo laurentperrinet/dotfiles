@@ -8,5 +8,5 @@ echo "> installing "
 sudo installer -pkg pandoc-1.12.3.pkg -target "/"
 echo "> cleaning up"
 #umount /Volumes/pandoc\ 1.12
-rm -f pandoc-1.12.*
+rm -fr pandoc-1.12.*
 echo "> installation finished "
