@@ -6,8 +6,7 @@
 # install Xcode on the Mac App Store by clicking on “View in Mac App Store”.
 
 # 2. install HomeBrew
-#ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 # to reinstall, do:
 # rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
 
@@ -54,7 +53,7 @@ brew install mercurial
 brew install npm
 npm install -g less
 
-sh osx_cask_full.sh
+sh osx_cask_base.sh
 brew install macvim
 #mkdir -p ~/Applications
 brew linkapps
