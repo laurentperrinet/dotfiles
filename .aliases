@@ -22,7 +22,7 @@ alias oo="open ."
 
 #python
 alias ip="ipython --pylab"
-alias in="ipython notebook --pylab inline"
+alias in="ipython notebook --profile default --pylab inline"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
