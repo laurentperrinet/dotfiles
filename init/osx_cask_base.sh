@@ -5,6 +5,7 @@ brew install brew-cask
 brew cask install clamxav
 brew cask uninstall bittorrent-sync
 brew cask install dropbox
+brew cask uninstall wireshark
 brew cask install java
 brew cask install firefox
 brew cask install google-chrome
@@ -21,4 +22,5 @@ brew cask install ukelele
 brew cask install unison
 brew cask install vimediamanager
 brew cask install vlc
+brew cask uninstall xbmc
 brew cask install xquartz
