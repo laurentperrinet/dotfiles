@@ -58,16 +58,17 @@ pip install -U pytest
 
 # scipy et al
 brew install freetype libjpeg zlib libpng
-pip uninstall PL
+ln -s /usr/local/include/freetype2 /usr/local/include/freetype
+pip uninstall PIL
 brew install homebrew/python/pillow
 brew install homebrew/python/scipy
 python -c "import scipy; scipy.test() "
 
 # pygame
-#brew tap samueljohn/python
+brew tap samueljohn/python
 #brew tap homebrew/headonly
 #brew install --HEAD smpeg
-#brew install samueljohn/python/pygame
+brew install samueljohn/python/pygame
 
 # pyglet
 #pip install -U Opengl

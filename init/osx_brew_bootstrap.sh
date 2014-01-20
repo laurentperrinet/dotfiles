@@ -53,7 +53,7 @@ brew install mercurial
 brew install npm
 npm install -g less
 
-sh osx_cask_base.sh
+# sh osx_cask_base.sh
 brew install macvim
 #mkdir -p ~/Applications
 brew linkapps
