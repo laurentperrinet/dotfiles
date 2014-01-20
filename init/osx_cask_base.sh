@@ -7,6 +7,7 @@ brew cask uninstall bittorrent-sync
 brew cask install dropbox
 brew cask uninstall wireshark
 brew cask install java
+brew cask install flash
 brew cask install firefox
 brew cask install google-chrome
 brew cask install iterm2
