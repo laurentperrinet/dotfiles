@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # 1. install HomeBrew + python
-
 sh osx_brew_python.sh
 
 # install scientific packages
@@ -31,6 +30,7 @@ pip install -U scikit-learn
 # neuralensemble
 pip install -U sumatra
 pip install -U NeuroTools
+pip install -U pynn
 #pip install hg+https://bitbucket.org/apdavison/sumatra
 
 # latex, bibliography and friends
