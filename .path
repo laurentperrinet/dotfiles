@@ -5,6 +5,7 @@ export PATH=$HOME/Library/Python/2.7/bin:$PATH
 export PYTHONPATH=$HOME/Library/Python/2.7/lib/python/site-packages
 # NEST
 export PATH=/opt/nest/bin:$PATH
+export PYTHONPATH=/opt/nest/lib/python2.7/site-packages
 # MacTex
 export PATH=/usr/texbin:$PATH
 # Inkscape.app
