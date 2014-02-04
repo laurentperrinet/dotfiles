@@ -1,2 +1,4 @@
 # Disable the startup message
 startup_message off
+altscreen on
+autodetach on
