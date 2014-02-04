@@ -2,6 +2,7 @@
 brew tap phinze/homebrew-cask
 brew install brew-cask
 
+brew cask install adobe-reader
 brew cask install clamxav
 brew cask uninstall bittorrent-sync
 brew cask install dropbox
@@ -19,9 +20,9 @@ brew cask uninstall sparkleshare
 brew cask install the-unarchiver
 #brew cask install tor-browser
 brew cask install tunnelblick
-brew cask install ukelele
+brew cask uninstall ukelele
 brew cask install unison
-brew cask install vimediamanager
+brew cask uninstall vimediamanager
 brew cask install vlc
 brew cask uninstall xbmc
 brew cask install xquartz

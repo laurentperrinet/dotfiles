@@ -54,6 +54,7 @@ pip install -U progressbar
 
 # testing
 pip install -U nose
+pip install -U coverage
 pip install -U pytest 
 
 # scipy et al
@@ -71,8 +72,8 @@ brew tap samueljohn/python
 brew install samueljohn/python/pygame
 
 # pyglet
-#pip install -U Opengl
-#pip install -U PyOpenGL PyOpenGL_accelerate
+pip uninstall Opengl
+pip uninstall PyOpenGL PyOpenGL_accelerate
 pip install -U glumpy
 
 pip install -U pyglet

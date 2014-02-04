@@ -6,7 +6,8 @@ sh osx_brew_python.sh
 # install scientific packages
 brew install yaml
 pip install -U pybtex
-
+brew install --with-openblas --with-valgrind r
+pip install -U rpy2
 # video utilities
 pip install -U svgwrite
 brew install imagemagick
@@ -15,13 +16,13 @@ brew install ffmpeg
 brew tap homebrew/science
 brew install tbb
 brew install --with-qt --with-tbb --with-ffmpeg homebrew/science/opencv
-pip install https://github.com/sightmachine/SimpleCV/zipball/master
+pip install -U https://github.com/sightmachine/SimpleCV/zipball/master
 
 # mayavi
 brew install --pyqt --python --qt vtk
-pip install configobj
-pip install envisage
-pip install "Mayavi[app]"
+pip install -U configobj
+pip install -U envisage
+pip install -U "Mayavi[app]"
 
 pip install -U sympy
 #machine learning

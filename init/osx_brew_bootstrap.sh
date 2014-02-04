@@ -44,6 +44,7 @@ brew install hub
 brew install lftp
 brew uninstall ncftp
 brew install mpg123 
+brew install fdupes
 brew uninstall cmus # a nice command-line utility to play music files
 
 brew install mercurial
