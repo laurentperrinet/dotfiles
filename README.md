@@ -4,16 +4,23 @@
 
 ### Using Git and the bootstrap script
 
-You can clone the repository wherever you want. (I like to keep it in `~/libs/dotfiles`, with `~/dotfiles` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
+You can clone this repository wherever you want. The bootstrapper script will pull in the latest version and copy the files to your home folder.
 
 ```bash
 git clone https://github.com/meduz/dotfiles.git && cd dotfiles && source bootstrap.sh
 ```
 
-One issue is that you may not have ```git``` installed by default, so you should bootstrap the process by installing the adequate bootstraping script:
+### Using Git and the bootstrap script, step-by-step
+One issue is that you may not have ```git``` installed by default, so you may  bootstrap the process by installing the adequate bootstraping script:
 ```bash
 curl https://raw.github.com/meduz/dotfiles/master/init/osx_brew_bootstrap.sh |sh
 ```
+
+On Mavericks, it is much simpler: Simply run 
+```bash
+git
+```
+And a pop-up window will appear that proposes to install the command line tools.
 
 To update, `cd` into your local `dotfiles` repository and then:
 

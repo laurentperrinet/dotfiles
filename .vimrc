@@ -87,8 +87,8 @@ set scrolloff=3
 
 " wraping
 " set wrap
-set textwidth=80
-set wrapmargin=2
+" set textwidth=80
+" set wrapmargin=2
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
@@ -172,8 +172,100 @@ noremap <silent> ,u :<C-B>sil <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>/
 " au BufEnter *.py nnoremap ,u mn:s/^\(\s*\)#\([^ ]\)/\1\2/ge<CR>:s/^#$//ge<CR>:noh<CR>`n
 " au BufEnter *.py inoremap ,u <C-O>mn<C-O>:s/^\(\s*\)#\([^ ]\)/\1\2/ge<CR><C-O>:s/^#$//ge<CR><C-O>:noh<CR><C-O>`n
 " au BufEnter *.py vnoremap ,u mn:s/^\(\s*\)#\([^ ]\)/\1\2/ge<CR>gv:s/#\n/\r/ge<CR>:noh<CR>gv`n
-" enabling the dark solarized scheme
-let g:solarized_termcolors=256
  syntax enable
-set background=dark
-colorscheme solarized
+
+
+" Vundle Install {{{
+if !isdirectory(expand('$HOME/.vim/bundle/vundle/.git', 1))
+  silent ! git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+  if v:shell_error
+    finish
+  else
+    silent ! vim +BundleInstall +qall
+  endif
+endif
+" }}}
+" Vundle {{{
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+" Syntax {{{
+  Bundle 'kchmck/vim-coffee-script'
+  Bundle 'hail2u/vim-css3-syntax'
+  Bundle 'ap/vim-css-color'
+  Bundle 'Soares/fish.vim'
+  Bundle 'tpope/vim-git'
+  Bundle 'tpope/vim-haml'
+  Bundle 'wlangstroth/vim-haskell'
+  Bundle 'digitaltoad/vim-jade'
+  Bundle 'pangloss/vim-javascript'
+  Bundle 'leshill/vim-json'
+  Bundle 'groenewege/vim-less'
+  Bundle 'tpope/vim-markdown'
+  Bundle 'mmalecki/vim-node.js'
+  Bundle 'tpope/vim-rails'
+  Bundle 'vim-ruby/vim-ruby'
+  Bundle 'wavded/vim-stylus'
+  Bundle 'timcharper/textile.vim'
+  Bundle 'tpope/vim-liquid'
+  " tpope/liquid should put after markdown and textile
+" }}}
+" Editing {{{
+  Bundle 'tpope/vim-abolish'
+  Bundle 'kien/ctrlp.vim'
+  Bundle 'Lokaltog/vim-easymotion'
+  Bundle 'kana/vim-fakeclip'
+  nmap <Leader><Leader> "+
+  vmap <Leader><Leader> "+
+
+  Bundle 'vim-scripts/lastpos.vim'
+  Bundle 'tpope/vim-repeat'
+  Bundle 'sjl/gundo.vim'
+  Bundle 'vim-scripts/ZoomWin'
+" }}}
+" Programming {{{
+  Bundle 'tpope/vim-commentary'
+  Bundle 'mattn/emmet-vim'
+  Bundle 'tpope/vim-endwise'
+  Bundle 'tpope/vim-fugitive'
+  Bundle 'airblade/vim-gitgutter'
+  let g:gitgutter_enabled = 0
+  let g:gitgutter_on_bufenter = 0
+
+  Bundle 'gregsexton/gitv'
+  Bundle 'nathanaelkane/vim-indent-guides'
+  let g:indent_guides_guide_size = 1
+
+  Bundle 'michaeljsmith/vim-indent-object'
+  runtime macros/matchit.vim
+  Bundle 'terryma/vim-multiple-cursors'
+  Bundle 'scrooloose/nerdcommenter'
+  Bundle 'scrooloose/nerdtree'
+  Bundle 'chrisbra/NrrwRgn'
+  Bundle 'tpope/vim-scriptease'
+  Bundle 'AndrewRadev/splitjoin.vim'
+  Bundle 'ervandew/supertab'
+  Bundle 'scrooloose/syntastic'
+  Bundle 'godlygeek/tabular'
+  Bundle 'bronson/vim-trailing-whitespace'
+  Bundle 'tpope/vim-unimpaired'
+" }}}
+" Colorschemes {{{
+"  Bundle 'chriskempson/base16-vim'
+"  Bundle 'larssmit/vim-getafe'
+"  Bundle 'ciaranm/inkpot'
+"  Bundle 'twerth/ir_black'
+"  Bundle 'nelstrom/vim-mac-classic-theme'
+"  Bundle 'tomasr/molokai'
+"  let g:molokai_original = 0
+"  let g:rehash256 = 1
+
+  Bundle 'altercation/vim-colors-solarized'
+  " enabling the dark solarized scheme
+  syntax enable
+  let g:solarized_termcolors=256
+  set background=dark
+  colorscheme solarized
+
+" }}}
