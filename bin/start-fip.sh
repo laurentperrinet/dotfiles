@@ -1,1 +1,1 @@
-ssh love@mingus.local "open -a /Applications/Safari.app/ ~/Desktop/fip\ -\ direct\ -\ Site\ Fip.webloc"
+ssh love@mingus.local "open -a /Applications/Safari.app/ ~/Desktop/\>\>\ F\ -\ I\ -P\ \<\<.webloc"
