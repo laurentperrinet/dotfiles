@@ -1,6 +1,6 @@
 # PATH additions
 # export PATH="~/bin:$PATH"
-export PATH="$HOME/bin:$PATH"
+export PATH=$HOME/bin:$PATH
 export PATH=$HOME/Library/Python/2.7/bin:$PATH
 export PYTHONPATH=$HOME/Library/Python/2.7/lib/python/site-packages
 # NEST
