@@ -6,8 +6,9 @@ sh osx_brew_python.sh
 # install scientific packages
 brew install yaml
 pip install -U pybtex
-brew install --with-openblas --with-valgrind r
-pip install -U rpy2
+#brew install --with-openblas --with-valgrind r
+#sudo ln -s "/usr/local/opt/r/R.framework" /Library/Frameworks
+#pip install -U rpy2
 # video utilities
 pip install -U svgwrite
 brew install imagemagick
