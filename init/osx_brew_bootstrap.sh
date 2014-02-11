@@ -49,6 +49,8 @@ brew uninstall cmus # a nice command-line utility to play music files
 
 brew install mercurial
 
+brew install rtmpdump
+brew install youtube-dl
 # 4. nikola
 
 brew install npm
