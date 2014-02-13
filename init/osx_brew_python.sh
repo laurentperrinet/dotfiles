@@ -47,6 +47,9 @@ pip install -U tornado
 # to use nbconvert with the ipython notebook, you need to install pandoc:
 # sh osx_install_pandoc.sh
 pip install -U ipython
+# install an offline version of mathjax
+python -c "from IPython.external import mathjax; mathjax.install_mathjax()"
+#
 brew install sip
 brew install pyqt
 pip install -U sphinx
