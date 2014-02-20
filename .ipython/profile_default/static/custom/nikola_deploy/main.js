@@ -31,14 +31,14 @@ function messager() {
 }
 
 function nikolaDeploy(path, clean) {
-  //IPython.notebook.kernel.execute('%bookmark root');
-  //IPython.notebook.kernel.execute('%cd ' + path);
+  IPython.notebook.kernel.execute('%bookmark root');
+  IPython.notebook.kernel.execute('%cd ' + path);
   //if (clean=="True") {
   //  IPython.notebook.kernel.execute('!nikola clean');
   //}
   IPython.notebook.kernel.execute('!nikola build');
   IPython.notebook.kernel.execute('!nikola deploy');
-  //IPython.notebook.kernel.execute('%cd -b root');
+  IPython.notebook.kernel.execute('%cd -b root');
   // messager();
 }
 

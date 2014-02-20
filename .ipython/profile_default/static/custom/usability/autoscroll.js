@@ -2,7 +2,7 @@ var collapse_threshold_control = function (element, IPython) {
     var label = $('<label/>').text('AutoScroll Limit:');
     var select = $('<select/>')
          .addClass('ui-widget-content')
-         .append($('<option/>').attr('value', '100').text('100 (default)'))
+         .append($('<option/>').attr('value', '1000').text('1000 (default)'))
          .append($('<option/>').attr('value', '-1').text('no-scroll'))
     
          element.append(label).append(select);

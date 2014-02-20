@@ -63,7 +63,7 @@ pip install -U pytest
 # scipy et al
 brew install freetype libjpeg zlib libpng
 ln -s /usr/local/include/freetype2 /usr/local/include/freetype
-pip uninstall PIL
+# pip uninstall PIL
 brew install homebrew/python/pillow
 brew install homebrew/python/scipy
 python -c "import scipy; scipy.test() "
