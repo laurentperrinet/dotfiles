@@ -20,6 +20,8 @@ alias s="subl ."
 alias o="open"
 alias oo="open ."
 
+# encfs
+alias passwd="encfs ~/Dropbox/Documents.encfs ~/Dropbox/Documents.secure -- -o volname='Documents'"
 #python
 alias ip="ipython"
 alias in="ipython notebook --profile default"

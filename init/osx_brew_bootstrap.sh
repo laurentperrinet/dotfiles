@@ -2,7 +2,7 @@
 
 # 1. install Xcode:
 # From this url : (uncomment the following line)
-# open http://itunes.apple.com/us/app/xcode/id497799835?mt=12 
+# open http://itunes.apple.com/us/app/xcode/id497799835?mt=12
 # install Xcode on the Mac App Store by clicking on “View in Mac App Store”.
 
 # 2. install HomeBrew
@@ -40,10 +40,10 @@ brew install git
 brew install make
 brew install hub
 
-# 3. install common utilities 
+# 3. install common utilities
 brew install lftp
-brew uninstall ncftp
-brew install mpg123 
+brew install encfs
+brew install mpg123
 brew install fdupes
 brew uninstall cmus # a nice command-line utility to play music files
 
