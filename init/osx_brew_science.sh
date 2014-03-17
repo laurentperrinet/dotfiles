@@ -4,7 +4,7 @@
 sh osx_brew_python.sh
 
 # install scientific packages
-brew install yaml
+brew install libyaml
 pip install -U pybtex
 #brew install --with-openblas --with-valgrind r
 #sudo ln -s "/usr/local/opt/r/R.framework" /Library/Frameworks

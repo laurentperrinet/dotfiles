@@ -10,13 +10,18 @@ sh osx_brew_bootstrap.sh
 
 # https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python
 brew install sqlite
-brew install python --with-brewed-tk
+brew install python
 
 pip install --upgrade setuptools
 pip install --upgrade distribute
 
-# editing 
+# editing
 brew install vim --with-python
+
+# testing
+pip install -U coverage
+pip install -U pytest
+pip install -U nose
 
 # numpy
 brew install gfortran
@@ -25,28 +30,34 @@ brew install fftw
 #brew install umfpack
 brew install libtool
 brew install hdf5
-brew tap homebrew/python
-brew install homebrew/python/numpy
+#brew tap homebrew/python
+brew tap homebrew/science
+brew tap Homebrew/python
+brew install numpy --with-openblas
 python -c "import numpy; numpy.test()"
 pip install -U numexpr
 pip install -U cython
 pip install -U tables
+pip install -U pandas
+brew test numpy
 
 # pylab
 pip install -U pyparsing
 pip install -U python-dateutil
-brew install homebrew/python/matplotlib --with-tex
+# brew install homebrew/python/matplotlib --with-tex
+brew install matplotlib --with-tex
 # pip install git+git://github.com/matplotlib/matplotlib.git
 python -c "import pylab; pylab.test() "
 # editing environment
-pip install -U threading
-pip install -U glob
+# pip install -U threading
+# pip install -U glob
 brew install zmq
 pip install -U pyzmq
 pip install -U tornado
 # to use nbconvert with the ipython notebook, you need to install pandoc:
 # sh osx_install_pandoc.sh
-pip install -U ipython
+# pip install -U ipython
+pip install -U ipython[zmq,qtconsole,notebook,test]
 # install an offline version of mathjax
 python -c "from IPython.external import mathjax; mathjax.install_mathjax()"
 #
@@ -55,18 +66,14 @@ brew install pyqt
 pip install -U sphinx
 pip install -U progressbar
 
-# testing
-pip install -U nose
-pip install -U coverage
-pip install -U pytest 
-
 # scipy et al
 brew install freetype libjpeg zlib libpng
 ln -s /usr/local/include/freetype2 /usr/local/include/freetype
 # pip uninstall PIL
-brew install homebrew/python/pillow
-brew install homebrew/python/scipy
-python -c "import scipy; scipy.test() "
+brew install pillow
+brew install scipy --with-openblas
+#python -c "import scipy; scipy.test() "
+brew test scipy
 
 # pygame
 brew tap samueljohn/python

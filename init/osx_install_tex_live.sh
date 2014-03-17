@@ -1,22 +1,20 @@
 # fetch and install texlive
 
-# OLD, manual style
-#wget http://ctan.ijs.si/mirror/tlpretest/mactex-2013.pkg # pre-release of TexLive 2013
-#cd ~/pool/soft
-#sudo installer -pkg ~/pool/soft/mactex-2013.pkg -target /
-# NEW homebrew style install
+# homebrew style cask install
 # Install native apps
 brew tap phinze/homebrew-cask
 brew install brew-cask
 brew cask install mactex
+
+sudo chown -R $USER  /usr/local/texlive
 # point to the right URL, see http://invibe.net/LaurentPerrinet/SciBlog/2013-06-12
-sudo tlmgr option location http://ctan.mines-albi.fr/systems/texlive/tlnet 
+# sudo tlmgr option location http://ctan.mines-albi.fr/systems/texlive/tlnet
 #sudo tlmgr option location  http://ftp.math.utah.edu/pub/texlive/tlpretest/
 #sudo tlmgr option location http://mirrors.ircam.fr/pub/CTAN/systems/texlive/tlnet/ 
 
 # update
-sudo tlmgr update --self
-sudo tlmgr update --all
+tlmgr update --self
+tlmgr update --all
 
 # setting some preferences in TexShop
 defaults write TeXShop NSUserKeyEquivalents -dict-add "Typeset" "@\\U21a9"
