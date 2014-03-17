@@ -5,6 +5,10 @@
 brew tap phinze/homebrew-cask
 brew install brew-cask
 brew cask install mactex
+brew cask install bibdesk
+brew cask install texshop
+brew cask install mendeley
+
 
 sudo chown -R $USER  /usr/local/texlive
 # point to the right URL, see http://invibe.net/LaurentPerrinet/SciBlog/2013-06-12

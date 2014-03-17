@@ -1,9 +1,8 @@
 sh osx_cask_base.sh
 
-brew cask install bibdesk
-brew cask install mactex
+# TeX suite
+sh osx_install_tex_live.sh
+# coding
 brew cask install sourcetree
 brew cask install spyder
-brew cask install texshop
-brew cask install mendeley
 brew cask install virtualbox
