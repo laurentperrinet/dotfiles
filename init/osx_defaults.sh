@@ -538,7 +538,7 @@ defaults write com.apple.terminal "Startup Window Settings" -string "Terminal"
 # defaults write org.x.X11 wm_ffm -bool true
 
 # Install pretty iTerm colors
-open "${HOME}/init/Mathias.itermcolors"
+# open "osx_solarized.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
