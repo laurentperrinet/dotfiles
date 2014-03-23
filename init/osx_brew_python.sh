@@ -30,16 +30,17 @@ brew install fftw
 #brew install umfpack
 brew install libtool
 brew install hdf5
-#brew tap homebrew/python
+brew untap homebrew/science
 brew tap homebrew/science
+brew untap homebrew/python
 brew tap Homebrew/python
-brew install numpy --with-openblas
+brew install numpy #--with-openblas
 python -c "import numpy; numpy.test()"
 pip install -U numexpr
 pip install -U cython
 pip install -U tables
 pip install -U pandas
-brew test numpy
+# brew test numpy
 
 # pylab
 pip install -U pyparsing
@@ -71,21 +72,17 @@ brew install freetype libjpeg zlib libpng
 ln -s /usr/local/include/freetype2 /usr/local/include/freetype
 # pip uninstall PIL
 brew install pillow
-brew install scipy --with-openblas
+brew install scipy #--with-openblas
 #python -c "import scipy; scipy.test() "
-brew test scipy
+# brew test scipy
 
 # pygame
-brew tap samueljohn/python
-#brew tap homebrew/headonly
-#brew install --HEAD smpeg
-brew install samueljohn/python/pygame
+brew untap samueljohn/python
+brew untap homebrew/headonly
+brew install --HEAD smpeg
+brew install pygame
 
 # pyglet
-pip uninstall Opengl
-pip uninstall PyOpenGL PyOpenGL_accelerate
-pip install -U glumpy
-
 pip install -U pyglet
 #pip install hg+https://pyglet.googlecode.com/hg/
 
