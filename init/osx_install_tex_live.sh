@@ -20,7 +20,7 @@ tlmgr update --self
 tlmgr update --all
 
 # setting some preferences in TexShop
-defaults write TeXShop NSUserKeyEquivalents -dict-add "Typeset" "@\\U21a9"
+defaults write TeXShop NSUserKeyEquivalents -dict-add "Typeset" "@t"
 defaults write TeXShop "BibTeXengine" -string "biber"
 defaults write TeXShop "Encoding"  -string  "IsoLatin"
 
