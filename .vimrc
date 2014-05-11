@@ -1,8 +1,14 @@
+set nocompatible            " Disable vi compatibility
+
+filetype on                 " filetype must be 'on' before setting it 'off'
+                            "   otherwise it exits with a bad status and breaks
+                            "   git commit.
+filetype off                " force reloading *after* pathogen loaded
+
 " Pathogen load
-filetype off
 "call pathogen#incubate()
-call pathogen#infect()
-call pathogen#helptags()
+" call pathogen#infect()
+" call pathogen#helptags()
 
 " Vundle Install {{{
 if !isdirectory(expand('$HOME/.vim/bundle/vundle/.git', 1))
@@ -15,9 +21,9 @@ if !isdirectory(expand('$HOME/.vim/bundle/vundle/.git', 1))
 endif
 " }}}
 " Vundle {{{
-filetype off
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" call vundle#rc()
+call vundle#begin()
 Bundle 'gmarik/vundle'
 " Syntax {{{
   Bundle 'kchmck/vim-coffee-script'
@@ -79,14 +85,23 @@ Bundle 'gmarik/vundle'
   Bundle 'godlygeek/tabular'
   Bundle 'bronson/vim-trailing-whitespace'
   Bundle 'tpope/vim-unimpaired'
+
+  Bundle 'millermedeiros/vim-statline'
 " }}}
-" Make Vim more useful
-set nocompatible
+call vundle#end()
+
+syntax on
+filetype plugin indent on   " enable detection, plugins and indent
+
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 " set clipboard=unnamed
-" Enhance command-line completion
-set wildmenu
+" --- command completion ---
+set wildmenu                " Hitting TAB in command mode will
+set wildchar=<TAB>          "   show possible completions.
+set wildmode=list:longest
 set wildignore=*.log,*.aux,*.dvi,*.aut,*.aux,*.bbl,*.blg,*.dvi,*.fff,*.log,*.out,*.pdf,*.ps,*.toc,*.ttt,*.pyc,*.pyo
+set wildignore+=*.DS_STORE,*.db,node_modules/**,*.jpg,*.png,*.gif
+
 " Allow cursor keys in insert mode
 set esckeys
 " Allow backspace in insert mode
@@ -117,8 +132,6 @@ set exrc
 set secure
 " Enable line numbers
 set number
-" Enable syntax highlighting
-syntax on
 " Highlight current line
 set cursorline
 " Make tabs as wide as two spaces
@@ -136,8 +149,9 @@ set incsearch
 set laststatus=2
 " Enable mouse in all modes
 set mouse=a
-" Disable error bells
+" --- remove sounds effects ---
 set noerrorbells
+set visualbell
 " Don’t reset cursor to start of line when moving around.
 set nostartofline
 " Show the cursor position
@@ -146,8 +160,54 @@ set ruler
 set shortmess=atI
 " Show the current mode
 set showmode
+
+" --- UI settings ---
+if has('gui_running')
+    "set guifont=Menlo:h13
+    set gfn:Monaco:h14
+    set transp=0
+
+    " toolbar and scrollbars
+    set guioptions-=T       " remove toolbar
+    set guioptions-=L       " left scroll bar
+    set guioptions-=r       " right scroll bar
+    set guioptions-=b       " bottom scroll bar
+    set guioptions-=h      " only calculate bottom scroll size of current line
+    set shortmess=atI       " Don't show the intro message at start and
+                            "   truncate msgs (avoid press ENTER msgs).
+endif
+
+
+set cursorline              " Highlight current line
+set laststatus=2            " Always show status line
+set number                  " Enable line numbers.
+set numberwidth=5           " width of numbers line (default on gvim is 4)
+set report=0                " Show all changes.
+set showmode                " Show the current mode.
+set showcmd                 " show partial command on last line of screen.
+set showmatch               " show matching parenthesis
+set splitbelow splitright   " how to split new windows.
+set title                   " Show the filename in the window title bar.
+
+set scrolloff=5             " Start scrolling n lines before horizontal
+                            "   border of window.
+set sidescrolloff=7         " Start scrolling n chars before end of screen.
+set sidescroll=1            " The minimal number of columns to scroll
+                            "   horizontally.
+
 " Show the filename in the window titlebar
-set title
+" set title
+
+" add useful stuff to title bar (file name, flags, cwd)
+" based on @factorylabs
+if has('title') && (has('gui_running') || &title)
+    set titlestring=
+    set titlestring+=%f
+    set titlestring+=%h%m%r%w
+    set titlestring+=\ -\ %{v:progname}
+    set titlestring+=\ -\ %{substitute(getcwd(),\ $HOME,\ '~',\ '')}
+endif
+
 " Show the (partial) command as it’s being typed
 set showcmd
 " Use relative line numbers
