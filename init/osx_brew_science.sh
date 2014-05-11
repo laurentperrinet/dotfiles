@@ -22,7 +22,7 @@ pip install -U https://github.com/sightmachine/SimpleCV/zipball/master
 # mayavi
 # brew install --pyqt --python --qt vtk
 brew uninstall vtk
-brew install vtk5 --with-qt
+brew install homebrew/versions/vtk5 --with-qt
 pip install -U configobj
 pip install -U envisage
 pip install -U "Mayavi[app]"
