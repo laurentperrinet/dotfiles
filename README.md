@@ -16,7 +16,7 @@ One issue is that you may not have ```git``` installed by default, so you may  b
 curl https://raw.github.com/meduz/dotfiles/master/init/osx_brew_bootstrap.sh |sh
 ```
 
-On Mavericks, it is much simpler: Simply run 
+On Mavericks, it is much simpler: Simply run
 ```bash
 git
 ```

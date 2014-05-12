@@ -26,29 +26,22 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
 Bundle 'gmarik/vundle'
 " Syntax {{{
-  Bundle 'kchmck/vim-coffee-script'
-  Bundle 'hail2u/vim-css3-syntax'
-  Bundle 'ap/vim-css-color'
-  Bundle 'Soares/fish.vim'
   Bundle 'tpope/vim-git'
-  Bundle 'tpope/vim-haml'
-  Bundle 'wlangstroth/vim-haskell'
-  Bundle 'digitaltoad/vim-jade'
   Bundle 'pangloss/vim-javascript'
   Bundle 'leshill/vim-json'
   Bundle 'groenewege/vim-less'
   Bundle 'tpope/vim-markdown'
   Bundle 'mmalecki/vim-node.js'
-  Bundle 'tpope/vim-rails'
-  Bundle 'vim-ruby/vim-ruby'
-  Bundle 'wavded/vim-stylus'
   Bundle 'timcharper/textile.vim'
   Bundle 'tpope/vim-liquid'
   " tpope/liquid should put after markdown and textile
 " }}}
 " Editing {{{
-  Bundle 'tpope/vim-abolish'
+"   Bundle 'tpope/vim-abolish'
   Bundle 'kien/ctrlp.vim'
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
   Bundle 'Lokaltog/vim-easymotion'
   Bundle 'kana/vim-fakeclip'
   nmap <Leader><Leader> "+
@@ -86,6 +79,7 @@ Bundle 'gmarik/vundle'
   Bundle 'bronson/vim-trailing-whitespace'
   Bundle 'tpope/vim-unimpaired'
 
+  Bundle 'altercation/vim-colors-solarized'
   Bundle 'millermedeiros/vim-statline'
 " }}}
 call vundle#end()
@@ -318,7 +312,6 @@ filetype plugin indent on
 "  let g:molokai_original = 0
 "  let g:rehash256 = 1
 
-  Bundle 'altercation/vim-colors-solarized'
   " enabling the dark solarized scheme
   syntax enable
   let g:solarized_termcolors=256
