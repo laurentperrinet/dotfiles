@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 1. install HomeBrew + python
-sh osx_brew_python.sh
+# sh osx_brew_python.sh
 
 # install scientific packages
 brew install libyaml
@@ -9,11 +9,14 @@ pip install -U pybtex
 #brew install --with-openblas --with-valgrind r
 #sudo ln -s "/usr/local/opt/r/R.framework" /Library/Frameworks
 #pip install -U rpy2
+
 # video utilities
 pip install -U svgwrite
 brew install imagemagick
 brew install x264
 brew install ffmpeg
+
+pip install pyprind
 brew tap homebrew/science
 brew install tbb
 brew install --with-qt --with-tbb --with-ffmpeg homebrew/science/opencv

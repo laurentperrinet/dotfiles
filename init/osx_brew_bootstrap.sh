@@ -43,6 +43,10 @@ brew install hub
 # 3. install common utilities
 brew install lftp
 brew install encfs
+
+sudo /bin/cp -RfX /usr/local/opt/osxfuse/Library/Filesystems/osxfusefs.fs /Library/Filesystems
+sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
+
 brew install mpg123
 brew install fdupes
 brew uninstall cmus # a nice command-line utility to play music files

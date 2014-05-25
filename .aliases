@@ -21,7 +21,8 @@ alias o="open"
 alias oo="open ."
 
 # encfs
-alias mypasswd="encfs ~/Dropbox/Documents.encfs ~/Private -- -o volname='Private' && open  ~/Private"
+alias mypasswd="encfs ~/Dropbox/Documents.encfs ~/Private -- -o volname='Private' && cd  ~/Private"
+alias mypasswd_umount="umount ~/Private"
 #python
 alias ip="ipython"
 alias in="ipython notebook --profile default"
