@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 1. install HomeBrew + python
-# sh osx_brew_python.sh
+sh osx_brew_python.sh
 
 # install scientific packages
 brew install libyaml
