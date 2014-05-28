@@ -1,4 +1,20 @@
-# fetch and install texlive
+# 1. install Xcode:
+# From this url : (uncomment the following line)
+# open http://itunes.apple.com/us/app/xcode/id497799835?mt=12
+# install Xcode on the Mac App Store by clicking on “View in Mac App Store”.
+
+# 2. install HomeBrew
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+# to reinstall, do:
+# rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
+
+# Make sure we’re using the latest Homebrew
+brew update
+
+# Upgrade any already-installed formulae
+brew upgrade
+
+# 3. fetch and install texlive
 
 # homebrew style cask install
 # Install native apps
