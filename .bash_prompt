@@ -43,12 +43,14 @@ export WHITE
 export BOLD
 export RESET
 
-function parse_git_dirty() {
-	[[ $(git status 2> /dev/null | tail -n1) != *"working directory clean"* ]] && echo "*"
-}
-
 function parse_git_branch() {
-	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+	local branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+	if [ -n "${branch}" ]; then
+		[ "${branch}" == "HEAD" ] && local branch=$(git rev-parse --short HEAD 2>/dev/null)
+		local status=$(git status --porcelain 2>/dev/null)
+		echo -n " on ${PURPLE}${branch}"
+		[ -n "${status}" ] && echo -n "*"
+	fi
 }
 
 #export PS1="[\t]\[\e[36;1m\]\h:\[\e[33;1m\]\w \`if [ \$? = 0 ]; then echo -e '\e[01;33m:)'; else echo -e '\e[01;31m:('; fi\` \[\e[00m\]" # http://slashdot.org/comments.pl?sid=108424&cid=9219400

@@ -4,7 +4,7 @@ git pull origin master
 function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
           --exclude "libs/" --exclude "init/" \
-		--exclude "README.md" --exclude "LICENSE-MIT.txt" -av --no-perms . ~
+		--exclude "README.md" --exclude "LICENSE-MIT.txt" -av --no-perms . ~/Dropbox/Mackup/
 	source ~/.bash_profile
 
 }
