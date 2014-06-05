@@ -22,7 +22,7 @@ alias oo="open ."
 
 # encfs
 alias mypasswd="encfs ~/Dropbox/Documents.encfs ~/Private -- -o volname='Private' && cd  ~/Private"
-alias mypasswd_umount="cd ~ && umount ~/Private"
+alias mypasswd_umount="cd ~ && umount ~/Private && quit"
 #python
 alias ip="ipython"
 alias in="ipython notebook --profile default"
