@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 1. install HomeBrew + python
-sh osx_brew_python.sh
+# sh osx_brew_python.sh
 
 # install scientific packages
 brew install libyaml
@@ -37,11 +37,13 @@ pip install -U scikit-learn
 # neuralensemble
 pip install -U sumatra
 pip install -U NeuroTools
+pip install -U brian
 pip install -U pynn
 #pip install hg+https://bitbucket.org/apdavison/sumatra
 
 # latex, bibliography and friends
 brew install bib-tool
 
+brew linkapps
 # Remove outdated versions from the cellar
 brew cleanup
