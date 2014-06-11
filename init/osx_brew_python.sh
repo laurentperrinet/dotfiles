@@ -4,7 +4,7 @@
 
 # 2. install HomeBrew
 # It is recommend to run the bootstrap_brew.sh script to obtain core packages
-sh osx_brew_bootstrap.sh
+# sh osx_brew_bootstrap.sh
 
 # 3. install python and friends
 
@@ -24,7 +24,7 @@ pip install -U pytest
 pip install -U nose
 
 # numpy
-brew install gfortran
+brew install gcc
 brew install cmake
 brew install fftw
 #brew install umfpack
@@ -54,6 +54,7 @@ python -c "import pylab; pylab.test() "
 # pip install -U glob
 brew install zmq
 pip install -U pyzmq
+pip install -U pygments
 pip install -U tornado
 # to use nbconvert with the ipython notebook, you need to install pandoc:
 # sh osx_install_pandoc.sh
@@ -68,8 +69,8 @@ pip install -U sphinx
 pip install -U progressbar
 
 # scipy et al
-brew install freetype libjpeg zlib libpng
-ln -s /usr/local/include/freetype2 /usr/local/include/freetype
+#brew install freetype libjpeg zlib libpng
+#ln -s /usr/local/include/freetype2 /usr/local/include/freetype
 # pip uninstall PIL
 brew install pillow
 brew install scipy #--with-openblas
@@ -77,9 +78,9 @@ brew install scipy #--with-openblas
 # brew test scipy
 
 # pygame
-brew untap samueljohn/python
-brew untap homebrew/headonly
-brew install --HEAD smpeg
+#brew untap samueljohn/python
+#brew untap homebrew/headonly
+brew install smpeg
 brew install pygame
 
 # pyglet
