@@ -6,3 +6,4 @@ sh osx_install_tex_live.sh
 brew cask install sourcetree
 brew cask install spyder
 brew cask install virtualbox
+brew cask install android-file-transfer
