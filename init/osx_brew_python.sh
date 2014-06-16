@@ -56,8 +56,8 @@ brew install zmq
 pip install -U pyzmq
 pip install -U pygments
 pip install -U tornado
-# to use nbconvert with the ipython notebook, you need to install pandoc:
-# sh osx_install_pandoc.sh
+# to use nbconvert with the ipython notebook, you need to install pandoce
+brew install pandoc
 # pip install -U ipython
 pip install -U ipython[zmq,qtconsole,notebook,test]
 # install an offline version of mathjax
