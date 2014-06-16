@@ -1,12 +1,9 @@
+sh osx_brew_bootstrap.sh
 echo "> downloading pandoc "
-curl -OL https://pandoc.googlecode.com/files/pandoc-1.12.3.pkg.zip
-unzip pandoc-1.12.3.pkg.zip
-#http://pandoc.googlecode.com/files/pandoc-1.12.dmg
-#echo "> mounting the image file "
-#hdiutil attach pandoc-1.12.dmg
+brew tap phinze/homebrew-cask
+brew install brew-cask
 echo "> installing "
-sudo installer -pkg pandoc-1.12.3.pkg -target "/"
+brew cask install pandoc
 echo "> cleaning up"
-#umount /Volumes/pandoc\ 1.12
-rm -fr pandoc-1.12.*
+brew cask cleanup
 echo "> installation finished "
