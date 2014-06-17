@@ -13,6 +13,6 @@ export PATH=$PATH:/Applications/Inkscape.app/Contents/Resources/bin
 # HomeBrew
 export PATH=/usr/local/bin:/usr/local/sbin:$HOME/.gem/ruby/1.8/bin:$PATH
 # HomeBrew/python
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:/usr/local/opt/vtk5/lib/python2.7/site-packages:$PYTHONPATH
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"

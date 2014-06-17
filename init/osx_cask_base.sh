@@ -14,7 +14,6 @@ brew cask install google-chrome
 brew cask install iterm2
 brew cask uninstall macvim
 #ln -s "/opt/homebrew-cask/Caskroom/macvim/7.4-72/MacVim-snapshot-72/mvim" "/usr/local/bin/mvim"
-brew cask install pandoc
 brew tap caskroom/fonts
 brew cask install caskroom/fonts/font-symbola
 brew cask install caskroom/fonts/font-inconsolata.
