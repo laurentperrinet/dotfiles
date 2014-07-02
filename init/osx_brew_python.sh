@@ -34,13 +34,12 @@ brew untap homebrew/science
 brew tap homebrew/science
 brew untap homebrew/python
 brew tap Homebrew/python
-brew install numpy #--with-openblas
-python -c "import numpy; numpy.test()"
 pip install -U numexpr
 pip install -U cython
 pip install -U tables
 pip install -U pandas
-# brew test numpy
+brew install numpy #--with-openblas
+brew test numpy
 
 # pylab
 pip install -U pyparsing
@@ -61,12 +60,13 @@ brew install pandoc
 # pip install -U ipython
 pip install -U ipython[zmq,qtconsole,notebook,test]
 # install an offline version of mathjax
-python -c "from IPython.external import mathjax; mathjax.install_mathjax()"
+# python -c "from IPython.external import mathjax; mathjax.install_mathjax()"
+pip install -U runipy
 #
 brew install sip
 brew install pyqt
 pip install -U sphinx
-pip install -U progressbar
+pip uninstall progressbar
 
 # scipy et al
 #brew install freetype libjpeg zlib libpng
@@ -84,8 +84,8 @@ brew install --HEAD smpeg
 brew install pygame
 
 # pyglet
-pip install -U pyglet
-#pip install hg+https://pyglet.googlecode.com/hg/
+# pip install -U pyglet
+pip install hg+https://pyglet.googlecode.com/hg/
 
 # Remove outdated versions from the cellar
 brew cleanup

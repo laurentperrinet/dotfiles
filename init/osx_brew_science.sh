@@ -16,7 +16,11 @@ brew install imagemagick
 brew install x264
 brew install ffmpeg
 
+brew install wxpython
+pip install -U psychopy
 pip install pyprind
+
+
 brew tap homebrew/science
 brew install tbb
 brew install --with-qt --with-tbb --with-ffmpeg homebrew/science/opencv
@@ -44,6 +48,7 @@ pip install -U pynn
 #pip install hg+https://bitbucket.org/apdavison/sumatra
 
 # latex, bibliography and friends
+sh osx_install_tex_live.sh
 brew install bib-tool
 
 brew linkapps

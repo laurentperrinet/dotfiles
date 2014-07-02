@@ -25,7 +25,7 @@ brew cask install bibdesk
 brew cask install texshop
 brew cask install mendeley-desktop
 
-# sudo chown -R $USER  /usr/local/texlive
+sudo chown -R $USER  /usr/local/texlive
 # point to the right URL, see http://invibe.net/LaurentPerrinet/SciBlog/2013-06-12
 # sudo tlmgr option location http://ctan.mines-albi.fr/systems/texlive/tlnet
 #sudo tlmgr option location  http://ftp.math.utah.edu/pub/texlive/tlpretest/
