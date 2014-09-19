@@ -41,6 +41,14 @@ pip install -U pandas
 brew install numpy #--with-openblas
 brew test numpy
 
+#brew install freetype libjpeg zlib libpng
+#ln -s /usr/local/include/freetype2 /usr/local/include/freetype
+# pip uninstall PIL
+brew install pillow
+
+# mac stuff
+brew install mackup
+pip install -U nikola
 # pylab
 pip install -U pyparsing
 pip install -U python-dateutil
@@ -69,10 +77,6 @@ pip install -U sphinx
 pip uninstall progressbar
 
 # scipy et al
-#brew install freetype libjpeg zlib libpng
-#ln -s /usr/local/include/freetype2 /usr/local/include/freetype
-# pip uninstall PIL
-brew install pillow
 brew install scipy #--with-openblas
 #python -c "import scipy; scipy.test() "
 # brew test scipy

@@ -59,10 +59,8 @@ brew install youtube-dl
 
 brew install npm
 npm install -g less
-pip install -U nikola
 
 
-brew install mackup
 brew install macvim
 #mkdir -p ~/Applications
 brew linkapps
