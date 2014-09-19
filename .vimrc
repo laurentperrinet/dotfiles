@@ -26,61 +26,62 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
 Bundle 'gmarik/vundle'
 " Syntax {{{
-  Bundle 'tpope/vim-git'
-  Bundle 'pangloss/vim-javascript'
-  Bundle 'leshill/vim-json'
-  Bundle 'groenewege/vim-less'
+"   Bundle 'tpope/vim-git'
+"   Bundle 'pangloss/vim-javascript'
+"   Bundle 'leshill/vim-json'
+"   Bundle 'groenewege/vim-less'
   Bundle 'tpope/vim-markdown'
-  Bundle 'mmalecki/vim-node.js'
+"   Bundle 'mmalecki/vim-node.js'
   Bundle 'timcharper/textile.vim'
-  Bundle 'tpope/vim-liquid'
+"   Bundle 'tpope/vim-liquid'
   " tpope/liquid should put after markdown and textile
 " }}}
 " Editing {{{
 "   Bundle 'tpope/vim-abolish'
-  Bundle 'kien/ctrlp.vim'
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+"   Bundle 'kien/ctrlp.vim'
+" let g:ctrlp_map = '<c-p>'
+" let g:ctrlp_cmd = 'CtrlP'
 
-  Bundle 'Lokaltog/vim-easymotion'
-  Bundle 'kana/vim-fakeclip'
-  nmap <Leader><Leader> "+
-  vmap <Leader><Leader> "+
-
-  Bundle 'vim-scripts/lastpos.vim'
-  Bundle 'tpope/vim-repeat'
-  Bundle 'sjl/gundo.vim'
-  Bundle 'vim-scripts/ZoomWin'
+"   Bundle 'Lokaltog/vim-easymotion'
+"   Bundle 'kana/vim-fakeclip'
+"   nmap <Leader><Leader> "+
+"   vmap <Leader><Leader> "+
+" 
+"   Bundle 'vim-scripts/lastpos.vim'
+"   Bundle 'tpope/vim-repeat'
+"   Bundle 'sjl/gundo.vim'
+"   Bundle 'vim-scripts/ZoomWin'
 " }}}
 " Programming {{{
-  Bundle 'tpope/vim-commentary'
-  Bundle 'mattn/emmet-vim'
-  Bundle 'tpope/vim-endwise'
-  Bundle 'tpope/vim-fugitive'
-  Bundle 'airblade/vim-gitgutter'
-  let g:gitgutter_enabled = 0
-  let g:gitgutter_on_bufenter = 0
-
-  Bundle 'gregsexton/gitv'
-  Bundle 'nathanaelkane/vim-indent-guides'
-  let g:indent_guides_guide_size = 1
-
-  Bundle 'michaeljsmith/vim-indent-object'
-  runtime macros/matchit.vim
-  Bundle 'terryma/vim-multiple-cursors'
-  Bundle 'scrooloose/nerdcommenter'
-  Bundle 'scrooloose/nerdtree'
-  Bundle 'chrisbra/NrrwRgn'
-  Bundle 'tpope/vim-scriptease'
-  Bundle 'AndrewRadev/splitjoin.vim'
-  Bundle 'ervandew/supertab'
-  Bundle 'scrooloose/syntastic'
-  Bundle 'godlygeek/tabular'
-  Bundle 'bronson/vim-trailing-whitespace'
-  Bundle 'tpope/vim-unimpaired'
+"   Bundle 'tpope/vim-commentary'
+"   Bundle 'mattn/emmet-vim'
+"   Bundle 'tpope/vim-endwise'
+"   Bundle 'tpope/vim-fugitive'
+"   Bundle 'airblade/vim-gitgutter'
+"   let g:gitgutter_enabled = 0
+"   let g:gitgutter_on_bufenter = 0
+" 
+"   Bundle 'gregsexton/gitv'
+"   Bundle 'nathanaelkane/vim-indent-guides'
+"   let g:indent_guides_guide_size = 1
+" 
+"   Bundle 'michaeljsmith/vim-indent-object'
+"   runtime macros/matchit.vim
+"   Bundle 'terryma/vim-multiple-cursors'
+"   Bundle 'scrooloose/nerdcommenter'
+"   Bundle 'scrooloose/nerdtree'
+"   Bundle 'chrisbra/NrrwRgn'
+"   Bundle 'tpope/vim-scriptease'
+"   Bundle 'AndrewRadev/splitjoin.vim'
+"   Bundle 'ervandew/supertab'
+"   Bundle 'scrooloose/syntastic'
+"   Bundle 'godlygeek/tabular'
+"   Bundle 'bronson/vim-trailing-whitespace'
+    Bundle 'ntpeters/vim-better-whitespace'
+"   Bundle 'tpope/vim-unimpaired'
 
   Bundle 'altercation/vim-colors-solarized'
-  Bundle 'millermedeiros/vim-statline'
+"   Bundle 'millermedeiros/vim-statline'
 " }}}
 call vundle#end()
 
@@ -88,7 +89,7 @@ syntax on
 filetype plugin indent on   " enable detection, plugins and indent
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
-" set clipboard=unnamed
+set clipboard=unnamed
 " --- command completion ---
 set wildmenu                " Hitting TAB in command mode will
 set wildchar=<TAB>          "   show possible completions.
