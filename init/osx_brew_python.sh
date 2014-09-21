@@ -85,7 +85,7 @@ brew install scipy #--with-openblas
 #brew untap samueljohn/python
 #brew untap homebrew/headonly
 brew install --HEAD smpeg
-brew install pygame
+brew uninstall pygame
 
 # pyglet
 # pip install -U pyglet

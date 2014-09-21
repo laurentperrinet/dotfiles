@@ -6,7 +6,7 @@
 # install Xcode on the Mac App Store by clicking on “View in Mac App Store”.
 
 # 2. install HomeBrew
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 # to reinstall, do:
 # rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
 
