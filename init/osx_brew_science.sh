@@ -14,7 +14,7 @@ pip install -U pybtex
 pip install -U svgwrite
 brew install imagemagick
 brew install x264
-brew install ffmpeg
+brew install ffmpeg --with-libvorbis --with-libvpx
 
 brew install wxpython
 pip install -U psychopy
