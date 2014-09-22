@@ -18,7 +18,7 @@ brew upgrade
 
 # homebrew style cask install
 # Install native apps
-brew tap phinze/homebrew-cask
+brew tap caskroom/cask
 brew install brew-cask
 brew cask install mactex
 brew cask install bibdesk

@@ -1,5 +1,5 @@
 # Install native apps
-brew tap phinze/homebrew-cask
+brew tap caskroom/cask
 brew install brew-cask
 
 brew cask install adobe-reader
