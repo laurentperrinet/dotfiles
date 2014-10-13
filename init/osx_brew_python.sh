@@ -35,7 +35,7 @@ brew tap homebrew/science
 brew untap homebrew/python
 brew tap Homebrew/python
 pip install -U numexpr
-pip install -U cython
+pip install -U cython=0.13
 pip install -U tables
 pip install -U pandas
 brew install numpy #--with-openblas

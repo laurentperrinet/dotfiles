@@ -211,7 +211,8 @@ if exists("&relativenumber")
 	au BufReadPost * set relativenumber
 endif
 " Start scrolling three lines before the horizontal window border
-set scrolloff=3
+"http://stackoverflow.com/questions/20374962/automate-synchronized-scrolling
+:command! -nargs=* -complete=file VBoundSplit setlocal scrollbind | vsplit <args> | setlocal scrollbind
 
 " wraping
 " set wrap
