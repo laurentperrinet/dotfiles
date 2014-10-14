@@ -77,6 +77,9 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
+# Remove duplicates in the “Open With” menu (also see `lscleanup` alias)
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+
 # Display ASCII control characters using caret notation in standard text views
 # Try e.g. `cd /tmp; unidecode "\x{0000}" > cc.txt; open -e cc.txt`
 defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
@@ -93,7 +96,7 @@ defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 # Set Help Viewer windows to non-floating mode
 defaults write com.apple.helpviewer DevMode -bool true
 
-# Fix for the ancient UTF-8 bug in QuickLook (http://mths.be/bbo)
+# Fix for the ancient UTF-8 bug in QuickLook (https://mths.be/bbo)
 # Commented out, as this is known to cause problems in various Adobe apps :(
 # See https://github.com/mathiasbynens/dotfiles/issues/237
 #echo "0x08000100:0" > ~/.CFUserTextEncoding
@@ -103,10 +106,10 @@ defaults write com.apple.helpviewer DevMode -bool true
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 # Restart automatically if the computer freezes
-systemsetup -setrestartfreeze on
+sudo systemsetup -setrestartfreeze on
 
 # Never go into computer sleep mode
-systemsetup -setcomputersleep Off > /dev/null
+sudo systemsetup -setcomputersleep Off > /dev/null
 
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
@@ -119,6 +122,12 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
 # Disable smart dashes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+# Set a custom wallpaper image. `DefaultDesktop.jpg` is already a symlink, and
+# all wallpapers are in `/Library/Desktop Pictures/`. The default is `Wave.jpg`.
+#rm -rf ~/Library/Application Support/Dock/desktoppicture.db
+#sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
+#sudo ln -s /path/to/your/image /System/Library/CoreServices/DefaultDesktop.jpg
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
@@ -203,7 +212,7 @@ defaults write com.apple.screencapture type -string "png"
 defaults write com.apple.screencapture disable-shadow -bool true
 
 # Enable subpixel font rendering on non-Apple LCDs
-#defaults write NSGlobalDomain AppleFontSmoothing -int 2
+defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
 # Enable HiDPI display modes (requires restart)
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
@@ -320,7 +329,6 @@ chflags nohidden ~/Library
 file=/Applications/Dropbox.app/Contents/Resources/emblem-dropbox-uptodate.icns
 [ -e "${file}" ] && mv -f "${file}" "${file}.bak"
 
-
 # Expand the following File Info panes:
 # “General”, “Open with”, and “Sharing & Permissions”
 defaults write com.apple.finder FXInfoPanesExpanded -dict \
@@ -337,7 +345,6 @@ defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
 # Set the icon size of Dock items to 36 pixels
 defaults write com.apple.dock tilesize -int 36
-
 
 # Change minimize/maximize window effect
 defaults write com.apple.dock mineffect -string "scale"
@@ -389,8 +396,14 @@ defaults write com.apple.dock autohide -bool true
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
 
-# Reset Launchpad
-find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
+# Make Dock more transparent
+defaults write com.apple.dock hide-mirror -bool true
+
+# Disable the Launchpad gesture (pinch with thumb and three fingers)
+#defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
+
+# Reset Launchpad, but keep the desktop wallpaper intact
+find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
 
 # Add iOS Simulator to Launchpad
 #ln -s /Applications/Xcode.app/Contents/Applications/iPhone\ Simulator.app /Applications/iOS\ Simulator.app
@@ -437,6 +450,9 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 
 # Hide Safari’s bookmarks bar by default
 defaults write com.apple.Safari ShowFavoritesBar -bool false
+
+# Hide Safari’s sidebar in Top Sites
+defaults write com.apple.Safari ShowSidebarInTopSites -bool false
 
 # Disable Safari’s thumbnail cache for History and Top Sites
 defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
@@ -519,26 +535,29 @@ sudo mdutil -i on / > /dev/null
 sudo mdutil -E / > /dev/null
 
 ###############################################################################
-# Terminal                                                                    #
+# Terminal & iTerm 2                                                          #
 ###############################################################################
 
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
-# Use a modified version of the Pro theme by default in Terminal.app
-open "osx_solarized.terminal"
-sleep 1 # Wait a bit to make sure the theme is loaded
-defaults write com.apple.terminal "Default Window Settings" -string "Terminal"
-defaults write com.apple.terminal "Startup Window Settings" -string "Terminal"
+# Use a modified version of the Solarized Dark theme by default in Terminal.app
+TERM_PROFILE='Solarized Dark xterm-256color';
+CURRENT_PROFILE="$(defaults read com.apple.terminal 'Default Window Settings')";
+if [ "${CURRENT_PROFILE}" != "${TERM_PROFILE}" ]; then
+	open "${HOME}/init/${TERM_PROFILE}.terminal";
+	sleep 1; # Wait a bit to make sure the theme is loaded
+	defaults write com.apple.terminal 'Default Window Settings' -string "${TERM_PROFILE}";
+	defaults write com.apple.terminal 'Startup Window Settings' -string "${TERM_PROFILE}";
+fi;
 
 # Enable “focus follows mouse” for Terminal.app and all X11 apps
 # i.e. hover over a window and start typing in it without clicking first
-# defaults write com.apple.terminal FocusFollowsMouse -bool true
-# defaults write com.apple.terminal FocusFollowsMouse -bool false
-# defaults write org.x.X11 wm_ffm -bool true
+#defaults write com.apple.terminal FocusFollowsMouse -bool true
+#defaults write org.x.X11 wm_ffm -bool true
 
-# Install pretty iTerm colors
-# open "osx_solarized.itermcolors"
+# Install the Solarized Dark theme for iTerm
+open "${HOME}/init/Solarized Dark.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
@@ -548,7 +567,7 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 ###############################################################################
 
 # Prevent Time Machine from prompting to use new hard drives as backup volume
-# defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 # Disable local Time Machine backups
 #hash tmutil &> /dev/null && sudo tmutil disablelocal
@@ -613,6 +632,10 @@ defaults write com.apple.appstore ShowDebugMenu -bool true
 # Allow installing user scripts via GitHub Gist or Userscripts.org
 defaults write com.google.Chrome ExtensionInstallSources -array "https://gist.githubusercontent.com/" "http://userscripts.org/*"
 defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://gist.githubusercontent.com/" "http://userscripts.org/*"
+
+# Disable the all too sensitive backswipe
+defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
+defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
 
 ###############################################################################
 # GPGMail 2                                                                   #

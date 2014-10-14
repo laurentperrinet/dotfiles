@@ -119,6 +119,9 @@ if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
 
+" Don’t create backups when editing files in certain directories
+set backupskip=/tmp/*,/private/tmp/*
+
 " Respect modeline in files
 set modeline
 set modelines=4
@@ -127,6 +130,8 @@ set exrc
 set secure
 " Enable line numbers
 set number
+" Enable syntax highlighting
+syntax on
 " Highlight current line
 set cursorline
 " Make tabs as wide as two spaces
@@ -144,7 +149,7 @@ set incsearch
 set laststatus=2
 " Enable mouse in all modes
 set mouse=a
-" --- remove sounds effects ---
+" Disable error bells
 set noerrorbells
 set visualbell
 " Don’t reset cursor to start of line when moving around.
@@ -213,11 +218,6 @@ endif
 " Start scrolling three lines before the horizontal window border
 "http://stackoverflow.com/questions/20374962/automate-synchronized-scrolling
 :command! -nargs=* -complete=file VBoundSplit setlocal scrollbind | vsplit <args> | setlocal scrollbind
-
-" wraping
-" set wrap
-" set textwidth=80
-" set wrapmargin=2
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
