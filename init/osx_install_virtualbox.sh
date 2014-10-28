@@ -1,10 +1,12 @@
 # homebrew style install
-
+echo "Latest :"
+curl http://download.virtualbox.org/virtualbox/LATEST.TXT | cat
+eval VERSION=`curl http://download.virtualbox.org/virtualbox/LATEST.TXT`
 # Install native apps
 brew tap caskroom/cask
 brew install brew-cask
 brew cask install virtualbox
-curl -sSL http://download.virtualbox.org/virtualbox/4.3.0/Oracle_VM_VirtualBox_Extension_Pack-4.3.0-89960.vbox-extpack -o /tmp/vboxextras.vbox-extpack
+curl -sSL http://download.virtualbox.org/virtualbox/$VERSION/Oracle_VM_VirtualBox_Extension_Pack-$VERSION.vbox-extpack -o /tmp/vboxextras.vbox-extpack
 VBoxManage extpack install /tmp/vboxextras.vbox-extpack
 
 # following http://ntk.me/2012/09/07/os-x-on-os-x/
