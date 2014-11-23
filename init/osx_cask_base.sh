@@ -5,6 +5,7 @@ brew install brew-cask
 brew cask install adobe-reader
 brew cask install clamxav
 brew cask uninstall bittorrent-sync
+brew cask install owncloud
 brew cask install dropbox
 brew cask uninstall wireshark
 brew cask install java

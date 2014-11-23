@@ -82,6 +82,7 @@ Bundle 'gmarik/vundle'
 
   Bundle 'altercation/vim-colors-solarized'
 "   Bundle 'millermedeiros/vim-statline'
+  Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " }}}
 call vundle#end()
 
@@ -161,6 +162,7 @@ set shortmess=atI
 " Show the current mode
 set showmode
 
+set tabpagemax=50
 " --- UI settings ---
 if has('gui_running')
     "set guifont=Menlo:h13
