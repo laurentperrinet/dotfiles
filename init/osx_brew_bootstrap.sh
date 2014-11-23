@@ -61,7 +61,9 @@ brew install npm
 npm install -g less
 
 
-brew install macvim
+brew install macvim --env-std --override-system-vim
+pip install git+git://github.com/Lokaltog/powerline
+o ../../libs/powerline/font/PowerlineSymbols.otf
 #mkdir -p ~/Applications
 brew linkapps
 # Remove outdated versions from the cellar
