@@ -11,6 +11,7 @@
 # https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python
 brew install sqlite
 brew install python
+python -m ensurepip --upgrade # https://docs.python.org/2/library/ensurepip.html
 
 pip install --upgrade setuptools
 pip install --upgrade distribute
@@ -53,8 +54,9 @@ pip install -U nikola
 pip install -U pyparsing
 pip install -U python-dateutil
 # brew install homebrew/python/matplotlib --with-tex
-brew install matplotlib --with-tex
+brew uninstall matplotlib --with-tex
 # pip install git+git://github.com/matplotlib/matplotlib.git
+pip install matplotlib
 python -c "import pylab; pylab.test() "
 # editing environment
 # pip install -U threading
