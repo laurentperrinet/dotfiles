@@ -1,5 +1,6 @@
 sh osx_cask_base.sh
 
+brew tap caskroom/versions
 # TeX suite
 sh osx_install_tex_live.sh
 # coding
