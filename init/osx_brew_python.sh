@@ -36,7 +36,7 @@ brew tap homebrew/science
 brew untap homebrew/python
 brew tap Homebrew/python
 pip install -U numexpr
-pip install -U cython=0.13
+pip install -U cython
 pip install -U tables
 pip install -U pandas
 brew install numpy #--with-openblas
@@ -76,7 +76,6 @@ pip install -U runipy
 brew install sip
 brew install pyqt
 pip install -U sphinx
-pip uninstall progressbar
 
 # scipy et al
 brew install scipy #--with-openblas
@@ -90,8 +89,8 @@ brew install --HEAD smpeg
 brew uninstall pygame
 
 # pyglet
-# pip install -U pyglet
-pip install hg+https://pyglet.googlecode.com/hg/
+pip install -U pyglet
+# pip install hg+https://pyglet.googlecode.com/hg/
 
 # Remove outdated versions from the cellar
 brew cleanup
