@@ -44,7 +44,6 @@ brew test numpy
 
 #brew install freetype libjpeg zlib libpng
 #ln -s /usr/local/include/freetype2 /usr/local/include/freetype
-# pip uninstall PIL
 brew install pillow
 
 # mac stuff
@@ -54,7 +53,6 @@ pip install -U nikola
 pip install -U pyparsing
 pip install -U python-dateutil
 # brew install homebrew/python/matplotlib --with-tex
-brew uninstall matplotlib --with-tex
 # pip install git+git://github.com/matplotlib/matplotlib.git
 pip install matplotlib
 python -c "import pylab; pylab.test() "
@@ -86,7 +84,6 @@ brew install scipy #--with-openblas
 #brew untap samueljohn/python
 #brew untap homebrew/headonly
 brew install --HEAD smpeg
-brew uninstall pygame
 
 # pyglet
 pip install -U pyglet
