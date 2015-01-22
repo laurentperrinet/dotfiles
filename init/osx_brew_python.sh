@@ -31,20 +31,22 @@ brew install fftw
 #brew install umfpack
 brew install libtool
 brew install hdf5
-brew untap homebrew/science
-brew tap homebrew/science
-brew untap homebrew/python
-brew tap Homebrew/python
+# brew untap homebrew/science
+# brew tap homebrew/science
+# brew untap homebrew/python
+# brew tap Homebrew/python
 pip install -U numexpr
 pip install -U cython
 pip install -U tables
 pip install -U pandas
-brew install numpy #--with-openblas
-brew test numpy
+brew uninstall numpy #--with-openblas
+pip install -U numpy #--with-openblas
+# brew test numpy
 
 #brew install freetype libjpeg zlib libpng
 #ln -s /usr/local/include/freetype2 /usr/local/include/freetype
-brew install pillow
+brew uninstall pillow
+pip install -U pillow
 
 # mac stuff
 brew install mackup
@@ -76,7 +78,8 @@ brew install pyqt
 pip install -U sphinx
 
 # scipy et al
-brew install scipy #--with-openblas
+brew uninstall scipy #--with-openblas
+pip installi -U scipy #--with-openblas
 #python -c "import scipy; scipy.test() "
 # brew test scipy
 
