@@ -28,37 +28,29 @@ pip install -U nose
 brew install gcc
 brew install cmake
 brew install fftw
-#brew install umfpack
 brew install libtool
 brew install hdf5
-# brew untap homebrew/science
-# brew tap homebrew/science
-# brew untap homebrew/python
-# brew tap Homebrew/python
 pip install -U numexpr
 pip install -U cython
 pip install -U tables
+pip install -U pillow
 pip install -U pandas
 pip install -U numpy #--with-openblas
-# brew test numpy
+#python -c "import numpy; numpy.test() "
 
-#brew install freetype libjpeg zlib libpng
-#ln -s /usr/local/include/freetype2 /usr/local/include/freetype
-pip install -U pillow
+# scipy et al
+pip install -U scipy #--with-openblas
+#python -c "import scipy; scipy.test() "
 
 # mac stuff
-brew install mackup
 pip install -U nikola
 # pylab
 pip install -U pyparsing
 pip install -U python-dateutil
-# brew install homebrew/python/matplotlib --with-tex
 # pip install git+git://github.com/matplotlib/matplotlib.git
-pip install matplotlib
+pip install -U matplotlib
 python -c "import pylab; pylab.test() "
 # editing environment
-# pip install -U threading
-# pip install -U glob
 brew install zmq
 pip install -U pyzmq
 pip install -U pygments
@@ -67,22 +59,13 @@ pip install -U tornado
 brew install pandoc
 # pip install -U ipython
 pip install -U ipython[zmq,qtconsole,notebook,test]
-# install an offline version of mathjax
-# python -c "from IPython.external import mathjax; mathjax.install_mathjax()"
 pip install -U runipy
 #
 brew install sip
 brew install pyqt
 pip install -U sphinx
 
-# scipy et al
-pip install -U scipy #--with-openblas
-#python -c "import scipy; scipy.test() "
-# brew test scipy
-
 # pygame
-#brew untap samueljohn/python
-#brew untap homebrew/headonly
 brew install --HEAD smpeg
 
 # pyglet
