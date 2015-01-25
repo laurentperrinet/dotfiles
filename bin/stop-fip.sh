@@ -1,1 +1,0 @@
-ssh love@mingus.local "killall Safari"
