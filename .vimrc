@@ -6,9 +6,12 @@ filetype on                 " filetype must be 'on' before setting it 'off'
 filetype off                " force reloading *after* pathogen loaded
 
 " Pathogen load
-"call pathogen#incubate()
-" call pathogen#infect()
-" call pathogen#helptags()
+
+call pathogen#infect()
+call pathogen#helptags()
+
+filetype plugin indent on
+syntax on
 
 " Vundle Install {{{
 if !isdirectory(expand('$HOME/.vim/bundle/vundle/.git', 1))
@@ -169,42 +172,6 @@ set ruler
 set shortmess=atI
 " Show the current mode
 set showmode
-
-set tabpagemax=50
-" --- UI settings ---
-if has('gui_running')
-    "set guifont=Menlo:h13
-    set gfn:Monaco:h14
-    set transp=0
-
-    " toolbar and scrollbars
-    set guioptions-=T       " remove toolbar
-    set guioptions-=L       " left scroll bar
-    set guioptions-=r       " right scroll bar
-    set guioptions-=b       " bottom scroll bar
-    set guioptions-=h      " only calculate bottom scroll size of current line
-    set shortmess=atI       " Don't show the intro message at start and
-                            "   truncate msgs (avoid press ENTER msgs).
-endif
-
-
-set cursorline              " Highlight current line
-set laststatus=2            " Always show status line
-set number                  " Enable line numbers.
-set numberwidth=5           " width of numbers line (default on gvim is 4)
-set report=0                " Show all changes.
-set showmode                " Show the current mode.
-set showcmd                 " show partial command on last line of screen.
-set showmatch               " show matching parenthesis
-set splitbelow splitright   " how to split new windows.
-set title                   " Show the filename in the window title bar.
-
-set scrolloff=5             " Start scrolling n lines before horizontal
-                            "   border of window.
-set sidescrolloff=7         " Start scrolling n chars before end of screen.
-set sidescroll=1            " The minimal number of columns to scroll
-                            "   horizontally.
-
 " Show the filename in the window titlebar
 " set title
 
@@ -226,8 +193,7 @@ if exists("&relativenumber")
 	au BufReadPost * set relativenumber
 endif
 " Start scrolling three lines before the horizontal window border
-"http://stackoverflow.com/questions/20374962/automate-synchronized-scrolling
-:command! -nargs=* -complete=file VBoundSplit setlocal scrollbind | vsplit <args> | setlocal scrollbind
+set scrolloff=3
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
@@ -318,8 +284,8 @@ let g:pymode_syntax_all = 1
 let g:pymode_syntax_indent_errors = g:pymode_syntax_all
 let g:pymode_syntax_space_errors = g:pymode_syntax_all
 "
-" Don't autofold code
-let g:pymode_folding = 0
+" autofold code
+"let :pymode_folding = 1
 "
 "filetype plugin indent on
 "syntax on

@@ -38,6 +38,7 @@ pip install -U "Mayavi[app]"
 
 pip install -U sympy
 #machine learning
+pip install -U joblib
 pip install -U scikit-learn
 pip install -U scikit-image
 
