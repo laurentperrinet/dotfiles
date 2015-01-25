@@ -5,14 +5,6 @@ filetype on                 " filetype must be 'on' before setting it 'off'
                             "   git commit.
 filetype off                " force reloading *after* pathogen loaded
 
-" Pathogen load
-
-call pathogen#infect()
-call pathogen#helptags()
-
-filetype plugin indent on
-syntax on
-
 " Vundle Install {{{
 if !isdirectory(expand('$HOME/.vim/bundle/vundle/.git', 1))
   silent ! git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
@@ -86,15 +78,22 @@ Bundle 'gmarik/vundle'
 
   Bundle 'altercation/vim-colors-solarized'
 "   Bundle 'millermedeiros/vim-statline'
-"   Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+   Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " }}}
 call vundle#end()
 
+" python from powerline.bindings.vim import source_plugin; source_plugin()
 python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
+source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 " Powerline setup
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
+" set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
+" set guifont=Anonympus\ Pro\ for\ Powerline\ 9
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 12
+let g:Powerline_symbols='unicode'
+set t_Co=256
+
 set laststatus=2
 
 syntax on
@@ -209,7 +208,7 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 " python related
 
-"filetype plugin indent on
+filetype plugin indent on
 " todo Read https://github.com/klen/python-mode#readme
 
 " Number of spaces that a pre-existing tab is equal to.
@@ -285,7 +284,10 @@ let g:pymode_syntax_indent_errors = g:pymode_syntax_all
 let g:pymode_syntax_space_errors = g:pymode_syntax_all
 "
 " autofold code
-"let :pymode_folding = 1
+let g:pymode_folding = 1
+"#Toggle fold methods \fo
+" let g:FoldMethod = 0
+"
 "
 "filetype plugin indent on
 "syntax on

@@ -19,7 +19,7 @@ brew upgrade
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
-sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
+# sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
 # Install some other useful utilities like `sponge`.
 brew install moreutils
@@ -43,11 +43,11 @@ brew install wget --with-iri
 #brew install narwhal
 
 # Install more recent versions of some OS X tools.
-brew install vim --override-system-vi
+# brew install vim --override-system-vi # we install macvim too
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
-brew install homebrew/php/php55 --with-gmp
+# brew install homebrew/php/php55 --with-gmp
 
 # Install font tools.
 brew tap bramstein/webfonttools
@@ -118,8 +118,7 @@ brew install rtmpdump
 brew install youtube-dl
 
 brew install macvim --env-std --override-system-vim
-pip install git+git://github.com/Lokaltog/powerline
-o ../../libs/powerline/font/PowerlineSymbols.otf
+pip install -U powerline-status
 
 # Install Node.js. Note: this installs `npm` too, using the recommended
 # installation method.
