@@ -2,6 +2,7 @@
 set background=dark
 colorscheme solarized
 " Use 14pt Menlo
-set guifont=Menlo:h14
+" set guifont=Menlo:h14
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 16
 " Better line-height
-set linespace=8
+" set linespace=8

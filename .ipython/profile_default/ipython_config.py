@@ -532,6 +532,6 @@ c = get_config()
 # c.StoreMagics.autorestore = False
 
 c.InteractiveShellApp.extensions = [
-            'powerline.bindings.ipython.post_0_1'
+            'powerline.bindings.ipython.post_0_11'
 ]
 

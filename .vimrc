@@ -31,6 +31,9 @@ Bundle 'gmarik/vundle'
 "   Bundle 'tpope/vim-liquid'
   " tpope/liquid should put after markdown and textile
   Bundle 'klen/python-mode'
+  Bundle 'davidhalter/jedi-vim'
+  Bundle 'ervandew/supertab'
+
 " }}}
 " Editing {{{
 "   Bundle 'tpope/vim-abolish'
@@ -64,8 +67,8 @@ Bundle 'gmarik/vundle'
 "   Bundle 'michaeljsmith/vim-indent-object'
 "   runtime macros/matchit.vim
 "   Bundle 'terryma/vim-multiple-cursors'
-"   Bundle 'scrooloose/nerdcommenter'
-"   Bundle 'scrooloose/nerdtree'
+  Bundle 'scrooloose/nerdcommenter'
+  Bundle 'scrooloose/nerdtree'
 "   Bundle 'chrisbra/NrrwRgn'
 "   Bundle 'tpope/vim-scriptease'
 "   Bundle 'AndrewRadev/splitjoin.vim'
@@ -82,17 +85,20 @@ Bundle 'gmarik/vundle'
 " }}}
 call vundle#end()
 
-" python from powerline.bindings.vim import source_plugin; source_plugin()
+map <Leader>t :NERDTreeToggle<CR>
+
+set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
 python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
-source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+
+" source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 " Powerline setup
 " set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
 " set guifont=Anonympus\ Pro\ for\ Powerline\ 9
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 12
-let g:Powerline_symbols='unicode'
-set t_Co=256
+" let g:Powerline_symbols='unicode'
+" set t_Co=256
 
 set laststatus=2
 
@@ -119,10 +125,7 @@ set gdefault
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
 " Change mapleader
-let mapleader=","
-" Don’t add empty newlines at the end of files
-set binary
-set noeol
+" let mapleader="ù"
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
@@ -206,6 +209,14 @@ noremap <leader>ss :call StripWhitespace()<CR>
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
+augroup vimrc_autocmds
+    autocmd!
+    " highlight characters past column 120
+    autocmd FileType python highlight Excess ctermbg=DarkGrey guibg=Black
+    autocmd FileType python match Excess /\%120v.*/
+    autocmd FileType python set nowrap
+augroup END
+
 " python related
 
 filetype plugin indent on
@@ -245,6 +256,14 @@ au FileType py set autoindent
 autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd BufRead *.py set nocindent
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
+
+
+" Use <leader>l to toggle display of whitespace
+nmap <leader>l :set list!<CR>
+" automatically change window's cwd to file's dir
+set autochdir
+
+"
 " Python-mode
 " Activate rope
 " Keys:
@@ -258,7 +277,7 @@ autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 " ]]            Jump on next class or function (normal, visual, operatormodes)
 " [M            Jump on previous class or method (normal, visual, operatormodes)
 " ]M            Jump on next class or method (normal, visual, operatormodes)
-let g:pymode_rope = 1
+let g:pymode_rope = 0
 "
 " Documentation
 let g:pymode_doc = 1
@@ -266,7 +285,8 @@ let g:pymode_doc_key = 'K'
 "
 "Linting
 let g:pymode_lint = 1
-let g:pymode_lint_checker = "pyflakes,pep8"
+" let g:pymode_lint_checker = "pyflakes,pep8"
+let g:pymode_lint_checkers = ["pep8","pyflakes"]
 " Auto check on save
 let g:pymode_lint_write = 1
 "

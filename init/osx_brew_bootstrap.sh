@@ -70,7 +70,7 @@ brew install woff2
 #brew install knock
 #brew install nmap
 #brew install pngcheck
-#brew install socat
+brew install socat
 #brew install sqlmap
 #brew install tcpflow
 #brew install tcpreplay
@@ -118,6 +118,8 @@ brew install rtmpdump
 brew install youtube-dl
 
 brew install macvim --env-std --override-system-vim
+
+pip install -U psutil
 pip install -U powerline-status
 
 # Install Node.js. Note: this installs `npm` too, using the recommended
