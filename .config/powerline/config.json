@@ -1,10 +1,10 @@
 {
 	"common": {
-		"term_truecolor": false
+		"term_truecolor": true
 	},
 	"ext": {
 		"ipython": {
-			"colorscheme": "solarized",
+			"colorscheme": "default",
 			"theme": "in",
 			"local_themes": {
 				"rewrite": "rewrite",
@@ -21,11 +21,11 @@
 			}
 		},
 		"tmux": {
-			"colorscheme": "solarized",
+			"colorscheme": "default",
 			"theme": "default"
 		},
 		"vim": {
-			"colorscheme": "solarized",
+			"colorscheme": "default",
 			"theme": "default",
 			"local_themes": {
 				"__tabline__": "tabline",
