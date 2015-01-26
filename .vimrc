@@ -96,7 +96,7 @@ python del powerline_setup
 " Powerline setup
 " set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
 " set guifont=Anonympus\ Pro\ for\ Powerline\ 9
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 18
+set guifont=Droid\ Sans\ Mono\ for\ Powerline:h14
 " let g:Powerline_symbols='unicode'
 " set t_Co=256
 
