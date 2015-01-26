@@ -1,6 +1,15 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+export POWERLINE=/usr/local/lib/python2.7/site-packages/powerline
+# . /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+if [ -f $POWERLINE/bindings/bash/powerline.sh ]; then
+	    source $POWERLINE/bindings/bash/powerline.sh
+fi
+
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
@@ -31,8 +40,6 @@ if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
 elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
-
-# . /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 
 # Enable tab completion for `g` by marking it as an alias for `git`
 if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
