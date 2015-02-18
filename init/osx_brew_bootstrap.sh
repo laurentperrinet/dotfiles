@@ -117,6 +117,7 @@ brew install mercurial
 brew install rtmpdump
 brew install youtube-dl
 
+pip install jedi
 brew install macvim --env-std --override-system-vim
 
 pip install -U psutil
@@ -125,6 +126,7 @@ pip install -U powerline-status
 # Install Node.js. Note: this installs `npm` too, using the recommended
 # installation method.
 brew install node
+npm install -g grunt-cli
 
 #mkdir -p ~/Applications
 brew linkapps

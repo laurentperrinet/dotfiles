@@ -23,7 +23,7 @@ Bundle 'gmarik/vundle'
 " Syntax {{{
 "   Bundle 'tpope/vim-git'
 "   Bundle 'pangloss/vim-javascript'
-"   Bundle 'leshill/vim-json'
+   Bundle 'leshill/vim-json'
 "   Bundle 'groenewege/vim-less'
   Bundle 'tpope/vim-markdown'
 "   Bundle 'mmalecki/vim-node.js'
@@ -85,6 +85,8 @@ Bundle 'gmarik/vundle'
 " }}}
 call vundle#end()
 
+au BufNewFile,BufRead *.ipynb set filetype=json
+
 map <Leader>t :NERDTreeToggle<CR>
 
 set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
@@ -103,7 +105,6 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline:h14
 set laststatus=2
 
 syntax on
-filetype plugin indent on   " enable detection, plugins and indent
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
@@ -219,7 +220,7 @@ augroup END
 
 " python related
 
-filetype plugin indent on
+filetype plugin indent on   " enable detection, plugins and indent
 " todo Read https://github.com/klen/python-mode#readme
 
 " Number of spaces that a pre-existing tab is equal to.
@@ -256,7 +257,8 @@ au FileType py set autoindent
 autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd BufRead *.py set nocindent
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
-
+autocmd BufRead *.py inoremap # X<c-h>#<space> #nosmartindent
+set nosmartindent
 
 " Use <leader>l to toggle display of whitespace
 nmap <leader>l :set list!<CR>
@@ -284,21 +286,21 @@ let g:pymode_doc = 1
 let g:pymode_doc_key = 'K'
 "
 "Linting
-let g:pymode_lint = 1
+let g:pymode_lint = 0
 " let g:pymode_lint_checker = "pyflakes,pep8"
 let g:pymode_lint_checkers = ["pep8","pyflakes"]
 " Auto check on save
 let g:pymode_lint_write = 1
 "
 " Support virtualenv
-let g:pymode_virtualenv = 1
+let g:pymode_virtualenv = 0
 "
 " Enable breakpoints plugin
-let g:pymode_breakpoint = 1
+let g:pymode_breakpoint = 0
 let g:pymode_breakpoint_key = '<leader>b'
 "
 " syntax highlighting
-let g:pymode_syntax = 1
+let g:pymode_syntax = 0
 let g:pymode_syntax_all = 1
 let g:pymode_syntax_indent_errors = g:pymode_syntax_all
 let g:pymode_syntax_space_errors = g:pymode_syntax_all
