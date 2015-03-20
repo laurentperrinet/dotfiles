@@ -35,13 +35,20 @@ pip install -U cython
 pip install -U tables
 pip install -U pillow
 pip install -U pandas
-pip install -U numpy #--with-openblas
-#python -c "import numpy; numpy.test() "
+# pip install -U numpy #--with-openblas
+brew install numpy
+python -c "import numpy; numpy.test() "
 
 # scipy et al
 pip install -U scipy #--with-openblas
-#python -c "import scipy; scipy.test() "
+python -c "import scipy; scipy.test() "
 
+pip install jedi
+brew install macvim --env-std --override-system-vim
+
+pip install -U psutil
+pip install -U powerline-status
+sh ../libs/powerline-fonts/install.sh
 # mac stuff
 pip install -U nikola
 # pylab
@@ -57,8 +64,8 @@ pip install -U pygments
 pip install -U tornado
 # to use nbconvert with the ipython notebook, you need to install pandoce
 brew install pandoc
-# pip install -U ipython
-pip install -U ipython[zmq,qtconsole,notebook,test]
+pip install -U ipython
+# pip install -U ipython[qtconsole,notebook,test]
 pip install -U runipy
 #
 brew install sip

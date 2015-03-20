@@ -14,14 +14,14 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
-#read -p "Enter the name of your host: "
-#export MYHOST=$REPLY
+read -p "Enter the name of your host: "
+export MYHOST=$REPLY
 
 # Set computer name (as done via System Preferences → Sharing)
-#sudo scutil --set ComputerName $MYHOST
-#sudo scutil --set HostName $MYHOST
-#sudo scutil --set LocalHostName $MYHOST
-#sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $MYHOST
+sudo scutil --set ComputerName $MYHOST
+sudo scutil --set HostName $MYHOST
+sudo scutil --set LocalHostName $MYHOST
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $MYHOST
 
 # Set standby delay to 2*24 hours (default is 1 hour)
 sudo pmset -a standbydelay 172800

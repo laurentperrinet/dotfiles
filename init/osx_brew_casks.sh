@@ -37,3 +37,13 @@ brew cask install xquartz
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package && qlmanage -r
 defaults write com.apple.finder QLEnableTextSelection -bool true && killall Finder
 
+
+brew tap caskroom/versions
+brew cask install todotxt
+# TeX suite
+sh osx_install_tex_live.sh
+# coding
+brew cask install sourcetree
+brew cask install spyder
+sh osx_install_virtualbox.sh
+brew cask install android-file-transfer
