@@ -37,11 +37,11 @@ pip install -U pillow
 pip install -U pandas
 # pip install -U numpy #--with-openblas
 brew install numpy
-python -c "import numpy; numpy.test() "
+# python -c "import numpy; numpy.test() "
 
 # scipy et al
 pip install -U scipy #--with-openblas
-python -c "import scipy; scipy.test() "
+# python -c "import scipy; scipy.test() "
 
 pip install jedi
 brew install macvim --env-std --override-system-vim
@@ -50,6 +50,7 @@ pip install -U psutil
 pip install -U powerline-status
 sh ../libs/powerline-fonts/install.sh
 # mac stuff
+brew install libxml2
 pip install -U nikola
 # pylab
 pip install -U pyparsing
