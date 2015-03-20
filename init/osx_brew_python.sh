@@ -62,9 +62,11 @@ brew install zmq
 pip install -U pyzmq
 pip install -U pygments
 pip install -U tornado
+pip install -U jsonschema
+pip install -U terminado
 # to use nbconvert with the ipython notebook, you need to install pandoce
 brew install pandoc
-pip install -U ipython
+pip install -U ipython[all]
 # pip install -U ipython[qtconsole,notebook,test]
 pip install -U runipy
 #
