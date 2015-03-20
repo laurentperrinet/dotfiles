@@ -56,7 +56,9 @@ pip install -U pyparsing
 pip install -U python-dateutil
 # pip install git+git://github.com/matplotlib/matplotlib.git
 pip install -U matplotlib
-python -c "import pylab; pylab.test() "
+# python -c "import pylab; pylab.test() "
+pip install -U holoviews
+
 # editing environment
 brew install zmq
 pip install -U pyzmq
