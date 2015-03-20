@@ -4,6 +4,7 @@
 # From this url : (uncomment the following line)
 # open http://itunes.apple.com/us/app/xcode/id497799835?mt=12
 # install Xcode on the Mac App Store by clicking on “View in Mac App Store”.
+xcode-select --install
 
 # 2. install HomeBrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"

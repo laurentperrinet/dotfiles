@@ -50,7 +50,6 @@ pip install -U psutil
 pip install -U powerline-status
 sh ../libs/powerline-fonts/install.sh
 # mac stuff
-brew install libxml2
 pip install -U nikola
 # pylab
 pip install -U pyparsing
