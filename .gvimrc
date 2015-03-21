@@ -5,4 +5,4 @@ colorscheme solarized
 " set guifont=Menlo:h14
 set guifont=Droid\ Sans\ Mono\ for\ Powerline:h14
 " Better line-height
-" set linespace=8
+set linespace=8
