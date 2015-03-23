@@ -7,16 +7,16 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias cdp="cd ~/pool"
+alias cdp="cd ~/oc/pool"
 alias cdl="cd ~/Downloads"
 alias cdt="cd ~/Desktop"
-alias cds="cd ~/pool/science"
+alias cds="cd ~/oc/pool/science"
 alias g="git"
 alias h="history"
 alias j="jobs"
 alias t='env LC_ALL=C todo.sh '
 # encfs
-alias mypasswd="encfs ~/Dropbox/Documents.encfs ~/Private -- -o volname='Private' && cd  ~/Private"
+alias mypasswd="encfs ~/oc/Documents.encfs ~/Private -- -o volname='Private' && cd  ~/Private"
 alias mypasswd_umount="cd ~ && umount ~/Private && exit"
 #python
 alias ip="ipython"
