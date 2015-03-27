@@ -50,6 +50,8 @@ pip install -U psutil
 pip install -U powerline-status
 sh ../libs/powerline-fonts/install.sh
 # mac stuff
+pip install -U webassets
+pip install -U markdown
 pip install -U nikola
 # pylab
 pip install -U pyparsing
