@@ -107,6 +107,9 @@ brew cask install osxfuse
 brew install encfs
 #sudo /bin/cp -RfX /usr/local/opt/osxfuse/Library/Filesystems/osxfusefs.fs /Library/Filesystems
 #sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
+brew install mackup
+brew install todo-txt
+brew cask install todotxt
 
 brew install mpg123
 brew install fdupes

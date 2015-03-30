@@ -16,7 +16,7 @@ alias h="history"
 alias j="jobs"
 alias t="LC_ALL='C' todo.sh -d ~/.todo/config"
 # encfs
-alias mypasswd="encfs ~/pool/Documents.encfs ~/Private -- -o volname='Private' && cd  ~/Private"
+alias mypasswd="encfs ~/pool/docs/Documents.encfs ~/Private -- -o volname='Private' && cd  ~/Private"
 alias mypasswd_umount="cd ~ && umount ~/Private && exit"
 #python
 alias ip="ipython"
