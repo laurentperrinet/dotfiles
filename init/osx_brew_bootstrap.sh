@@ -104,6 +104,7 @@ brew install make
 brew install hub
 
 brew cask install osxfuse
+brew install sshfs
 brew install encfs
 #sudo /bin/cp -RfX /usr/local/opt/osxfuse/Library/Filesystems/osxfusefs.fs /Library/Filesystems
 #sudo chmod +s /Library/Filesystems/osxfusefs.fs/Support/load_osxfusefs
