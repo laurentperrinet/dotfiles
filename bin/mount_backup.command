@@ -1,2 +1,2 @@
 #!/bin/bash
-sh ~/bin/mount_data.sh
+sh ~/bin/mount_backup.sh
