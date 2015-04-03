@@ -1,2 +1,2 @@
-diskutil unmount force ~/Desktop/data_drive
-rmdir ~/Desktop/data_drive
+diskutil unmount force ~/data_drive
+rmdir ~/data_drive
