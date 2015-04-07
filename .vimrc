@@ -81,7 +81,7 @@ Bundle 'gmarik/vundle'
 
   Bundle 'altercation/vim-colors-solarized'
 "   Bundle 'millermedeiros/vim-statline'
-   Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"   Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " }}}
 call vundle#end()
 
@@ -89,10 +89,10 @@ au BufNewFile,BufRead *.ipynb set filetype=json
 
 map <Leader>t :NERDTreeToggle<CR>
 
-set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+"set rtp+=/usr/local/lib/python3.4/site-packages/powerline/bindings/vim/plugin/powerline.vim
+"python3 from powerline.vim import setup as powerline_setup
+"python3 powerline_setup()
+"python3 del powerline_setup
 
 " source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 " Powerline setup
