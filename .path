@@ -1,8 +1,10 @@
 # PATH additions
 # export PATH="~/bin:$PATH"
 export PATH=$HOME/bin:$PATH
-export PATH=$HOME/Library/Python/2.7/bin:$PATH
-export PYTHONPATH=$HOME/Library/Python/2.7/lib/python/site-packages
+# export PATH=$HOME/Library/Python/2.7/bin:$PATH
+# export PYTHONPATH=$HOME/Library/Python/2.7/lib/python/site-packages
+export PATH=$HOME/Library/Python/3.4/bin:$PATH
+export PYTHONPATH=$HOME/Library/Python/3.4/lib/python/site-packages
 # NEST
 # export PATH=/opt/nest/bin:$PATH
 # export PYTHONPATH=/opt/nest/lib/python2.7/site-packages
@@ -13,7 +15,7 @@ export PATH=$PATH:/Applications/Inkscape.app/Contents/Resources/bin
 # HomeBrew
 export PATH=/usr/local/bin:/usr/local/sbin:$HOME/.gem/ruby/1.8/bin:$PATH
 # HomeBrew/python
-export PYTHONPATH=/usr/local/opt/vtk5/lib/python2.7/site-packages:$PYTHONPATH
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+export PYTHONPATH=/usr/local/opt/vtk5/lib/python3.4/site-packages:$PYTHONPATH
+export PYTHONPATH=/usr/local/lib/python3.4/site-packages:$PYTHONPATH
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
