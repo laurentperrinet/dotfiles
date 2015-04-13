@@ -31,7 +31,7 @@ Bundle 'gmarik/vundle'
 "   Bundle 'tpope/vim-liquid'
   " tpope/liquid should put after markdown and textile
   Bundle 'klen/python-mode'
-  Bundle 'davidhalter/jedi-vim'
+"   Bundle 'davidhalter/jedi-vim'
   Bundle 'ervandew/supertab'
 
 " }}}

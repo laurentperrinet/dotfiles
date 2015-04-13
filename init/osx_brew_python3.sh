@@ -14,17 +14,16 @@ rm -fr /usr/local/lib/python2.7
 # https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python
 brew install python3
 pip3 install --upgrade pip setuptools
-python3 -m ensurepip3 --upgrade # https://docs.python.org/2/library/ensurepip.html
+python3 -m ensurepip --upgrade # https://docs.python.org/2/library/ensurepip.html
 
 # editing
 brew install vim --with-python3
 brew install macvim --env-std --override-system-vim --with-python3
 
-
 # testing
-pip3 install -U coverage
-pip3 install -U pytest
-pip3 install -U nose
+pip install -U coverage
+pip install -U pytest
+pip install -U nose
 
 # numpy
 brew tap homebrew/science
@@ -34,59 +33,60 @@ brew install cmake
 brew install fftw
 brew install libtool
 brew install hdf5
-pip3 install -U numexpr
-pip3 install -U cython
-pip3 install -U tables
-pip3 install -U h5py
-pip3 install -U pillow
-pip3 install -U pandas
-pip3 install -U numpy #--with-openblas
+pip install -U numexpr
+pip install -U cython
+pip install -U tables
+pip install -U h5py
+pip install -U pillow
+pip install -U pandas
+pip install -U numpy #--with-openblas
 python3 -c "import numpy; numpy.test() "
 
 # scipy et al
-pip3 install -U scipy #--with-openblas
+pip install -U scipy #--with-openblas
 python3 -c "import scipy; scipy.test() "
 
-pip3 install jedi
+pip install jedi
 
-pip3 install -U psutil
-pip3 install -U powerline-status
+pip install -U psutil
+pip install -U powerline-status
 sh ../libs/powerline-fonts/install.sh
 # mac stuff
-pip3 install -U webassets
-pip3 install -U markdown
-pip3 install -U nikola
+pip install -U webassets
+pip install -U markdown
+pip install -U nikola
 # pylab
-pip3 install -U pyparsing
-pip3 install -U python-dateutil
-# pip3 install git+git://github.com/matplotlib/matplotlib.git
-pip3 install -U matplotlib
+pip install -U pyparsing
+pip install -U python-dateutil
+# pip install git+git://github.com/matplotlib/matplotlib.git
+pip install -U matplotlib
 # python -c "import pylab; pylab.test() "
-pip3 install -U holoviews
+pip install -U holoviews
 
 # editing environment
 brew install zmq
-pip3 install -U pyzmq
-pip3 install -U pygments
-pip3 install -U tornado
-pip3 install -U jsonschema
-pip3 install -U terminado
+pip install -U pyzmq
+pip install -U pygments
+pip install -U tornado
+pip install -U jsonschema
+pip install -U terminado
 # to use nbconvert with the ipython notebook, you need to install pandoce
 brew install pandoc
-pip3 install -U ipython[all]
-# pip3 install -U ipython[qtconsole,notebook,test]
-pip3 install -U runipy
+pip install -U ipython[all]
+# pip install -U ipython[qtconsole,notebook,test]
+pip install -U runipy
 #
 brew install sip
 brew install pyqt
-pip3 install -U sphinx
+pip install -U sphinx
 
 # pygame
 brew install --HEAD smpeg
 
+pip install youtube_dl
 # pyglet
-pip3 install -U pyglet
-# pip3 install hg+https://pyglet.googlecode.com/hg/
+pip install -U pyglet
+# pip install hg+https://pyglet.googlecode.com/hg/
 
 # Remove outdated versions from the cellar
 brew cleanup

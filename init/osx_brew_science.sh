@@ -23,7 +23,7 @@ pip install pyprind
 
 brew tap homebrew/science
 brew install tbb
-brew install --with-qt --with-tbb --with-ffmpeg homebrew/science/opencv
+# brew install --with-qt --with-tbb --with-ffmpeg homebrew/science/opencv
 # pip install -U https://github.com/sightmachine/SimpleCV/zipball/master
 pip install -U SimpleCV
 

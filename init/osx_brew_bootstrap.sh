@@ -117,10 +117,10 @@ brew install fdupes
 brew uninstall cmus # a nice command-line utility to play music files
 
 brew install lftp
-brew install mercurial
+brew uninstall mercurial
 
 brew install rtmpdump
-brew install youtube-dl
+brew uninstall youtube-dl
 
 # Install Node.js. Note: this installs `npm` too, using the recommended
 # installation method.
