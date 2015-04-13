@@ -77,7 +77,7 @@ brew install socat
 #brew install tcpreplay
 #brew install tcptrace
 #brew install ucspi-tcp # `tcpserver` etc.
-brew install xpdf
+brew uninstall xpdf
 #brew install xz
 
 # Install other useful binaries.
@@ -120,7 +120,8 @@ brew install lftp
 brew uninstall mercurial
 
 brew install rtmpdump
-brew uninstall youtube-dl
+brew install libav
+brew install youtube-dl --with-rtmpdump
 
 # Install Node.js. Note: this installs `npm` too, using the recommended
 # installation method.
