@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Usage: pyenv completions <command> [arg1 arg2...]
+
+set -e
+[ -n "$PYENV_DEBUG" ] && set -x
+
+COMMAND="$1"
+if [ -z "$COMMAND" ]; then
+  pyenv-help --usage completions >&2
+  exit 1
+fi
+
+COMMAND_PATH="$(command -v "pyenv-$COMMAND" || command -v "pyenv-sh-$COMMAND")"
+if grep -iE "^([#%]|--|//) provide pyenv completions" "$COMMAND_PATH" >/dev/null; then
+  shift
+  exec "$COMMAND_PATH" --complete "$@"
+fi
