@@ -50,11 +50,11 @@ pip install -U h5py
 pip install -U pillow
 pip install -U pandas
 pip install -U numpy #--with-openblas
-python -c "import numpy; numpy.test() "
+# python -c "import numpy; numpy.test() "
 
 # scipy et al
 pip install -U scipy #--with-openblas
-python -c "import scipy; scipy.test() "
+# python -c "import scipy; scipy.test() "
 
 pip install jedi
 
@@ -71,6 +71,7 @@ pip install -U python-dateutil
 # pip install git+git://github.com/matplotlib/matplotlib.git
 pip install -U matplotlib
 # python -c "import pylab; pylab.test() "
+pip install -U imagen
 pip install -U holoviews
 
 # editing environment
@@ -97,6 +98,8 @@ brew install --HEAD smpeg
 pip install youtube_dl
 # pyglet
 pip install -U pyglet
+pip install -U pyOpenGL
+pip install -U gloo
 
 # 1. install HomeBrew + python
 # sh osx_brew_python.sh
