@@ -53,7 +53,7 @@ alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date
 
 # Get OS X Software Updates, TexLive and update installed Ruby gems, Homebrew, npm, and their installed packages
 #alias update='echo "MacOSX updates"; sudo softwareupdate -i -a; echo "TeXLive updates"; sudo tlmgr update --self; sudo tlmgr update --all; echo "HomeBrew updates"; brew update;  brew upgrade; brew cleanup; sudo gem update'
-alias update='echo "TeXLive updates"; tlmgr update --self; tlmgr update --all; echo "HomeBrew updates"; brew update;  brew upgrade; brew cleanup'
+alias update='echo "TeXLive updates"; tlmgr update --self; tlmgr update --all; echo "HomeBrew updates"; brew update;  brew upgrade --all; brew cleanup'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
