@@ -126,16 +126,7 @@ brew install tbb
 # brew install --with-qt --with-tbb --with-ffmpeg homebrew/science/opencv
 # pip install -U https://github.com/sightmachine/SimpleCV/zipball/master
 pip install -U SimpleCV
-
-# mayavi
-# brew install --pyqt --python --qt vtk
-# brew uninstall vtk
-brew install vtk5 --with-qt
-# follow the caveats for the vtk (see the .path file)
-pip install -U configobj
-pip install -U envisage
-pip install -U "Mayavi[app]"
-
+# mathematics
 pip install -U sympy
 #machine learning
 pip install -U joblib
