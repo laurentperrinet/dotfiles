@@ -1,14 +1,12 @@
-# Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
-
-eval "$(pyenv init -)"
 export PYENV_ROOT="$HOME/.pyenv"
-
+# export PYENV_ROOT=/usr/local/opt/pyenv
+# if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+eval "$(pyenv init -)"
 
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
-export POWERLINE=/usr/local/lib/python2.7/site-packages/powerline
+export POWERLINE=$HOME/.pyenv//versions/3.4.3/lib/python3.4/site-packages/powerline
 # . /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 if [ -f $POWERLINE/bindings/bash/powerline.sh ]; then
 	    source $POWERLINE/bindings/bash/powerline.sh
@@ -74,7 +72,7 @@ esac
 if [ -f $BREW/etc/bash_completion ]; then
 . $BREW/etc/bash_completion
 fi
-	
+
 if [ -e /usr/local/bin/gwhich ]; then
 	 alias which="(alias; declare -f) | /usr/local/bin/gwhich --tty-only --all --read-functions --read-alias --show-dot --show-tilde"
 else

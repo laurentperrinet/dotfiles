@@ -12,19 +12,17 @@
 
 # 4. install python3 and friends
 # https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python
-# brew uninstall python3
-# rm -fr /usr/local/lib/python3.4
+brew uninstall python3
+rm -fr /usr/local/lib/python3.4
 brew install pyenv
 pyenv install 2.7.9
-pyenv uninstall 3.3.3
 pyenv install 3.4.3
-pyenv global 2.7.9
+# pyenv global 2.7.9
 pyenv global 3.4.3
 pyenv rehash
 
-# pip3 install --upgrade pip setuptools
-python -m ensurepip --upgrade # https://docs.python.org/2/library/ensurepip.html
-pip install --upgrade pip
+pip3 install --upgrade pip setuptools
+# python -m ensurepip --upgrade # https://docs.python.org/2/library/ensurepip.html
 
 # editing
 brew install vim --with-python3
